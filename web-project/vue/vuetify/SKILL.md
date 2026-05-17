@@ -1,6 +1,6 @@
 ---
 name: vuetify-skilld
-description: "Vue Material Component Framework. ALWAYS use when writing code importing \"vuetify\". Consult for debugging, best practices, or modifying vuetify."
+description: "Vuetify reference for Vue projects. Use when code imports \"vuetify\" or uses Vuetify components, layouts, or theming. Confirm the installed major version before applying version-specific migration or breaking-change guidance."
 metadata:
   version: 4.0.1
   generated_at: 2026-04-20
@@ -11,6 +11,15 @@ metadata:
 **Tags:** v1-stable: 1.5.24, v2-stable: 2.7.2, dev: 4.0.1
 
 **References:** [Docs](./references/docs/_INDEX.md)
+
+## Version Boundary
+
+This skill is generated from Vuetify 4.0.1 references. Before applying API changes, migration notes, or breaking-change guidance, inspect the target project's `package.json` or lockfile and confirm the installed Vuetify major version.
+
+- For Vuetify 4 projects or explicit Vuetify 4 migration tasks, use the v4 guidance below.
+- For Vuetify 3 projects, use only general component/layout/theming guidance that is confirmed to exist in Vuetify 3, and prefer project-local code plus installed package docs over v4 migration notes.
+- For unknown versions, ask or inspect dependencies before changing code.
+
 ## API Changes
 
 This section documents version-specific API changes — prioritize recent major/minor releases.

@@ -1,0 +1,22 @@
+# Web Project Skill Set
+
+General frontend web project entry point for framework and tooling references.
+
+## Scope
+
+`SKILL.md` routes to nested skills only when the current task needs them. It is not Vue-specific: Vue, React/Next.js, Vite, pnpm, Vuetify, and UI/UX design references can all live under this entry point.
+
+## Nested Skills
+
+- `vue/`: Vue 3 Composition API and ecosystem references.
+- `vue/pinia/`: Pinia stores and state management.
+- `vue/vue-router/`: Vue Router routing and guard behavior.
+- `vue/vuetify/`: Vuetify component, layout, theming, and version-specific references.
+- `react/`: React and Next.js performance best practices.
+- `vite/`: Vite config, plugin, build, SSR, and migration references.
+- `pnpm/`: pnpm workspace, dependency, lockfile, and CI guidance.
+- `design/`: Penpot-focused UI/UX design workflow, loaded only for explicit design work.
+
+## Priority
+
+These skills are reference material. User preferences, repository-local instructions, and project conventions take priority when they conflict.

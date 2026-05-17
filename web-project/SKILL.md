@@ -5,7 +5,9 @@ description: Modern web project guidance organized from Vue, Pinia, Vue Router, 
 
 # Web Project
 
-Use this skill as the web project entry point. First identify the stack from repository files, then load only the relevant nested skill.
+Use this skill as the general frontend web project entry point. First identify the stack from repository files, then load only the relevant nested skill.
+
+This skill provides framework and tooling references only. If it conflicts with the user's global coding specification or repository-local instructions, follow those higher-priority instructions.
 
 ## Index
 
@@ -24,10 +26,11 @@ Use this skill as the web project entry point. First identify the stack from rep
 2. For Vue state, also read `vue/pinia/SKILL.md`.
 3. For Vue routes, guards, params, or navigation bugs, also read `vue/vue-router/SKILL.md`.
 4. For `vuetify` imports or Vuetify components/layout/theme work, also read `vue/vuetify/SKILL.md`.
-5. For React or Next.js code, read `react/SKILL.md`.
+5. For React or Next.js code, read `react/SKILL.md`. Do not load it for non-React frontend projects.
 6. For `vite.config.*`, Vite plugins, build/SSR/library mode, or dev server issues, read `vite/SKILL.md`.
 7. For `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `.npmrc`, workspace filters, or dependency changes, read `pnpm/SKILL.md`.
-8. For interface design, Penpot, accessibility, layout, design systems, dashboards, forms, or navigation design, read `design/SKILL.md`.
+8. For interface design, Penpot, accessibility design, layout design, design systems, dashboards, forms, or navigation design, read `design/SKILL.md` only when the user explicitly asks for UI/UX design work or the task is primarily a design task.
+9. For Vuetify, first identify the installed Vuetify major version from project dependencies. Use Vuetify 4 migration or breaking-change guidance only when the project is on Vuetify 4 or the user explicitly asks about Vuetify 4 migration.
 
 ## Workflow
 

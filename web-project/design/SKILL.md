@@ -1,11 +1,15 @@
 ---
 name: penpot-uiux-design
-description: 'Comprehensive guide for creating professional UI/UX designs in Penpot using MCP tools. Use this skill when: (1) Creating new UI/UX designs for web, mobile, or desktop applications, (2) Building design systems with components and tokens, (3) Designing dashboards, forms, navigation, or landing pages, (4) Applying accessibility standards and best practices, (5) Following platform guidelines (iOS, Android, Material Design), (6) Reviewing or improving existing Penpot designs for usability. Triggers: "design a UI", "create interface", "build layout", "design dashboard", "create form", "design landing page", "make it accessible", "design system", "component library".'
+description: 'Penpot-focused UI/UX design guide using MCP tools. Use only when the user explicitly asks for UI/UX design, Penpot work, design systems, accessibility design, interface layout design, or review/improvement of an existing design. Do not trigger for ordinary frontend implementation tasks just because they mention forms, navigation, dashboards, or components.'
 ---
 
 # Penpot UI/UX Design Guide
 
 Create professional, user-centered designs in Penpot using the `penpot/penpot-mcp` MCP server and proven UI/UX principles.
+
+## Activation Boundary
+
+Use this skill only for explicit design work. For normal frontend coding tasks, follow the project's framework and UI library conventions without loading Penpot workflows unless the user asks for them.
 
 ## Available MCP Tools
 
