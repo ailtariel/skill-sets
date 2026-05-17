@@ -1,5 +1,19 @@
 Personal customized skill sets.
 
+## Install
+
+Install the general frontend entry skill from this repository:
+
+```bash
+npx skills add https://github.com/ailtariel/skill-sets --skill web-project
+```
+
+For local testing from this checkout:
+
+```bash
+npx skills add . --skill web-project
+```
+
 ## Update
 
 Use `update_skills.py` to stage or apply updates from configured git sources.
