@@ -39,6 +39,7 @@ These paths are used by `update_skills.py`.
 | `web-project/vue/vue-router/` | `https://github.com/JetBrains/skills.git` -> `vue-router-best-practices` |
 | `web-project/vue/vuetify/` | `https://github.com/skilld-dev/vue-ecosystem-skills.git` -> `skills/vuetify-skilld` |
 | `web-project/react/` | `https://github.com/vercel-labs/agent-skills.git` -> `skills/react-best-practices` |
+| `web-project/react/ant-design/` | Local Ant Design guidance; maintained in this repository. |
 | `web-project/vite/` | `https://github.com/antfu/skills.git` -> `skills/vite` |
 | `web-project/pnpm/` | `https://github.com/antfu/skills.git` -> `skills/pnpm` |
 | `web-project/design/` | `https://github.com/github/awesome-copilot.git` -> `skills/penpot-uiux-design` |

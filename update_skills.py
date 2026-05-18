@@ -68,6 +68,7 @@ SKILLS: tuple[SkillSource, ...] = (
         repo="https://github.com/vercel-labs/agent-skills.git",
         source_path=Path("skills/react-best-practices"),
         target_path=Path("web-project/react"),
+        entries=("SKILL.md", "README.md", "AGENTS.md", "metadata.json", "rules"),
     ),
     SkillSource(
         name="design",
@@ -86,6 +87,7 @@ SKILLS: tuple[SkillSource, ...] = (
 
 UNKNOWN_SOURCES: tuple[str, ...] = (
     "web-project: local aggregate entry point; no external git source.",
+    "ant-design: local Ant Design guidance under web-project/react/ant-design; no external git source.",
 )
 
 
