@@ -71,6 +71,12 @@ SKILLS: tuple[SkillSource, ...] = (
         entries=("SKILL.md", "README.md", "AGENTS.md", "metadata.json", "rules"),
     ),
     SkillSource(
+        name="ant-design",
+        repo="https://github.com/ant-design/antd-skill.git",
+        source_path=Path("skills/ant-design"),
+        target_path=Path("web-project/react/ant-design"),
+    ),
+    SkillSource(
         name="design",
         repo="https://github.com/github/awesome-copilot.git",
         source_path=Path("skills/penpot-uiux-design"),
@@ -87,7 +93,6 @@ SKILLS: tuple[SkillSource, ...] = (
 
 UNKNOWN_SOURCES: tuple[str, ...] = (
     "web-project: local aggregate entry point; no external git source.",
-    "ant-design: local Ant Design guidance under web-project/react/ant-design; no external git source.",
 )
 
 
