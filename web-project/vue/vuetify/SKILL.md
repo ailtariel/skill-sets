@@ -10,7 +10,7 @@ metadata:
 # vuetifyjs/vuetify `vuetify@4.1.0`
 **Tags:** latest: 4.1.0, v3-stable: 3.12.8, v2-stable: 2.7.2, v1-stable: 1.5.24, dev: 4.1.0-beta.1
 
-**References:** [Docs](./references/docs/_INDEX.md) · [Release API Index v4.0.1-v4.1.0](./references/releases/v4.0.1-to-v4.1.0-api-index.md) · [AI Implementation Principles](./references/ai-implementation-principles-cn.md)
+**References:** [Docs](./references/docs/_INDEX.md) · [Release API Index v4.0.1-v4.1.0](./references/releases/v4.0.1-to-v4.1.0-api-index.md) · [AI Implementation Principles](./references/ai-implementation-principles.md)
 
 ## Version Boundary
 

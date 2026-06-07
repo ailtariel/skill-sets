@@ -10,7 +10,8 @@ The skill is no longer updated from `skilld-dev/vue-ecosystem-skills`. It is mai
 - `agents/openai.yaml` - UI metadata for the skill.
 - `references/docs/` - local mirror of official Vuetify documentation pages.
 - `references/releases/` - release notes and release-derived API/component change indexes.
-- `references/ai-implementation-principles-cn.md` - local Chinese guidance for AI-assisted Vuetify implementation.
+- `references/ai-implementation-principles.md` - local guidance for AI-assisted Vuetify implementation.
+- `references/ai-implementation-principles-cn.md` - Chinese translation of the AI implementation principles.
 
 ## Current Baseline
 
