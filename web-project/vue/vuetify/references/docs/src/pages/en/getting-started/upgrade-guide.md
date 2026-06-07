@@ -1,5 +1,4 @@
 ---
-emphasized: true
 meta:
   nav: Upgrade guide
   title: Upgrade guide
@@ -19,7 +18,7 @@ This page contains a detailed list of breaking changes and the steps required to
 
 ## Quick Start with Vuetify MCP
 
-The fastest way to check your project for breaking changes is with Vuetify MCP. To get started, run the following in your terminal:
+The fastest way to check your project for breaking changes is with [Vuetify MCP](https://github.com/vuetifyjs/mcp/). To get started, run the following in your terminal:
 
 ```bash
 # Claude Code
@@ -45,7 +44,7 @@ Using the vuetify-mcp server, scan this project for Vuetify 3 to 4 breaking chan
 
 This will automatically analyze your codebase and provide a tailored list of changes you need to make.
 
-If you have any questions about the upgrade process, come visit us at community.vuetifyjs.com.
+If you have any questions about the upgrade process, come visit us at [community.vuetifyjs.com](https://community.vuetifyjs.com/).
 
 ## Multi-step migration
 
@@ -55,13 +54,13 @@ Even though these migrations mostly come down to adjusting CSS classes, manually
 
 - **HTML elements** — `<h1>` through `<h6>` (affected by CSS reset)
 - **Grid usage** — `<v-row>` and `<v-col>`, with specific focus on ad-hoc spacing adjustments (i.e. classes like `mx-0`, `pa-0`)
-- **Grid attributes** — `dense`, `no-gutters`, `align`, `justify`, `order`, `align-self` (affected by grid changes)
+- **Grid attributes** — `dense`, `align`, `justify`, `order`, `align-self` (affected by grid changes)
 - **Shadows** — `elevation-*` classes and `elevation` attributes or CSS overrides (affected by elevation changes)
 - **CSS classes** — `text-h1` … `text-h6`, `text-subtitle-1`, `text-body-2`, `text-caption`, `text-overline`, `elevation-*`, `offset-*` (affected by typography)
 
 Identify the areas with the highest usage first, apply the corresponding compatibility snippets, and then schedule the full class-by-class migration as a follow-up.
 
-vuetify-codemods can be used to automate many of these changes.
+Sections tagged with <codemod-chip>Codemod Available</codemod-chip> can be automated using [vuetify-codemods](https://www.npmjs.com/package/vuetify-codemods).
 
 ## Styles
 
@@ -71,7 +70,7 @@ There are now pre-compiled entry points for the most common style changes. If yo
 
 ### CSS reset
 
-The CSS reset has been mostly removed, with style normalisation being moved to individual components instead. You can inspect the exact changes to learn more. Here is the high level overview:
+The CSS reset has been mostly removed, with style normalisation being moved to individual components instead. You can inspect the exact [changes](https://github.com/vuetifyjs/vuetify/pull/20960/changes#diff-87996fc432835581ad883bedbc1975ad3a3f44b5747b2b831e3fa03dfdabb91f) to learn more. Here is the high level overview:
 
 - global `* { padding: 0; margin: 0; }` is gone - no longer resets all elements
 - `<button>`, `<input>`, `<select>` have their browser-native borders and background colors.
@@ -85,7 +84,7 @@ If you notice browser styles adding unnecessary spaces and impact text size, it 
     margin: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
 }
@@ -128,6 +127,23 @@ Restoring most of the previous reset styles would be heavy-handed, but will get 
 }
 ```
 
+#### Applying without a build step
+
+The snippets above are plain CSS and do not require Sass compiler — drop them into any stylesheet, or inline them within `<style>` block when using the CDN build:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@4/dist/vuetify.css">
+
+<style>
+  @layer vuetify-core.reset {
+    ul, ol, figure, details, summary { padding: 0; margin: 0; }
+    h1, h2, h3, h4, h5, h6, p { margin: 0; }
+  }
+</style>
+```
+
+Place the `<style>` block after Vuetify's stylesheet so the layer order declared in `vuetify.css` takes effect first. Subsequent `@layer vuetify-core.reset { … }` rules append to the existing layer and won't override component styles.
+
 ### Layers
 
 Cascade layers are now being used everywhere. If you have other styles that are not using `@layer` they will now always take priority over vuetify.
@@ -147,19 +163,25 @@ This can be used to easily interleave your own layers with ours:
 
 If you had any usages of `@layer vuetify.*` in your styles they should be replaced with your own layer name with an appropriate declaration order.
 
-### Typography
+### Typography {codemod-available}
 
-The typography system has been updated from Material Design 2 to Material Design 3. Variant names have changed:
+The typography system has been updated from Material Design 2 to Material Design 3. The following replacements will have some minor font size differences:
 
-| MD2 (Legacy)           | MD3 (New)                                             |
-|------------------------|-------------------------------------------------------|
-| `h1` - `h3`            | `display-large`, `display-medium`, `display-small`    |
-| `h4` - `h6`            | `headline-large`, `headline-medium`, `headline-small` |
-| `subtitle-1`, `body-1` | `body-large`                                          |
-| `body-2`               | `body-medium`                                         |
-| `caption`              | `body-small`                                          |
-| `button`, `subtitle-2` | `label-large`                                         |
-| `overline`             | `label-small`                                         |
+| MD2 (Legacy)      | MD3 (New)                          |
+|-------------------|------------------------------------|
+| `text-h1`         | `text-display-large` (96px → 60px) |
+| `text-h2`         | `text-display-large`               |
+| `text-h3`         | `text-display-medium`              |
+| `text-h4`         | `text-headline-large`              |
+| `text-h5`         | `text-headline-small`              |
+| `text-h6`         | `text-title-large`                 |
+| `text-subtitle-1` | `text-body-large`                  |
+| `text-subtitle-2` | `text-title-small`                 |
+| `text-body-1`     | `text-body-large`                  |
+| `text-body-2`     | `text-body-medium`                 |
+| `text-button`     | `text-label-large` (No uppercase)  |
+| `text-caption`    | `text-body-small`                  |
+| `text-overline`   | `text-label-medium` (No uppercase) |
 
 For detailed mapping and migration instructions, see [Typography Migration](/getting-started/typography-migration/).
 
@@ -204,7 +226,7 @@ export default createVuetify({
 );
 ```
 
-### Elevation
+### Elevation {codemod-available}
 
 Elevation classes (shadows) have been updated to Material Design 3 which uses 6 levels (0-5) instead of 25 (0-24).
 
@@ -329,6 +351,15 @@ VCounter is used to display the counter hint under VTextField, VTextarea and VFi
 }
 ```
 
+### VDatePicker
+
+`multiple="range"` emits only the start and end dates instead of everything in between. Use something like [date-fns' `eachDayOfInterval`](https://date-fns.org/v4.1.0/docs/eachDayOfInterval) if you need all dates in the range.
+
+```diff
+- ['2023-09-28', '2023-09-29', '2023-09-30', '2023-10-01', '2023-10-02']
++ ['2023-09-28', '2023-10-02']
+```
+
 ### VFileInput
 
 Removed the **$file-input-details-padding-inline** Sass variable.
@@ -340,7 +371,7 @@ Removed the **$file-input-details-padding-inline** Sass variable.
 );
 ```
 
-### VForm
+### VForm {codemod-available}
 
 Slot variables are no longer refs, read-only values passed to slots are now unwrapped:
 
@@ -374,7 +405,7 @@ Removed the **$radio-group-details-padding-inline** Sass variable.
 );
 ```
 
-### VSelect/VCombobox/VAutocomplete
+### VSelect/VCombobox/VAutocomplete {codemod-available}
 
 `item` in slots has been renamed to `internalItem` for consistency with VList and VDataTable. `item` is still available but is now an alias for `internalItem.raw` which seems like the most common use case.
 
@@ -412,7 +443,7 @@ Or remove `.raw`:
   </VSelect>
 ```
 
-### VSnackbar
+### VSnackbar {codemod-available}
 
 ::: warning
 This component has its internal HTML structure overhauled to incorporate **header** and **prepend** slots
@@ -429,7 +460,7 @@ Removed the `multi-line` prop and the **$snackbar-multi-line-wrapper-min-height*
   />
 ```
 
-### VSnackbarQueue
+### VSnackbarQueue {codemod-available}
 
 ::: warning
 This component has been rewritten to enable showing multiple snackbars at once
@@ -469,7 +500,7 @@ The grid system has been refactored to use CSS `gap` instead of negative margins
 | Gaps from padding                                             | No default padding, utilizes CSS `gap` |
 | Widths from hardcoded percentage (e.g., `75%` for `.v-col-9`) | Calculated width accounting for gaps   |
 
-#### Prop changes on VRow
+#### Prop changes on VRow {codemod-available}
 
 | Previous                         | New                                              |
 |----------------------------------|--------------------------------------------------|
@@ -480,7 +511,7 @@ The grid system has been refactored to use CSS `gap` instead of negative margins
 | `align-sm`, `justify-md`, etc.   | use responsive utility classes                   |
 | no fine-grained control over gap | `gap` prop accepts number, string, or `[x, y]`   |
 
-#### Prop changes on VCol
+#### Prop changes on VCol {codemod-available}
 
 | Previous                                | New                                                 |
 |-----------------------------------------|-----------------------------------------------------|

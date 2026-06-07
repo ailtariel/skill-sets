@@ -6,15 +6,28 @@ meta:
   keywords: Vuetify November 2025, v3.11.0 Harbinger, VCalendar, VHotkey, VTimePicker, VDatePicker MD3
 ---
 
+<script setup>
+  import { useTheme } from 'vuetify'
 
+  const theme = useTheme()
+  const mcplogo = computed(() => {
+    return `https://cdn.vuetifyjs.com/docs/images/one/logos/vmcp-logo-${theme.current.value.dark ? 'dark' : 'light'}.png`
+  })
+  const zerologo = computed(() => {
+    return `https://cdn.vuetifyjs.com/docs/images/one/logos/vzero-logo-${theme.current.value.dark ? 'dark' : 'light'}.png`
+  })
+  const vuetifylogo = computed(() => {
+    return `https://cdn.vuetifyjs.com/docs/images/one/logos/vuetify-logo-${theme.current.value.dark ? 'dark' : 'light'}.png`
+  })
+</script>
 
 # November 2025 Update
 
 Welcome to the November 2025 Vuetify update! This month marks a major milestone with the release of **v3.11.0 (Harbinger)**, promoting VCalendar and VHotkey from labs to core, introducing the new VTimePicker input variant, and aligning VDatePicker with Material Design 3 specifications.
 
+![Hero image for November update](https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/november-hero.png "November hero image")
 
-
- John Leider •  December 10th, 2025
+🖊️ John Leider • 📅 December 10th, 2025
 
 <PromotedEntry />
 
@@ -26,7 +39,7 @@ November was a landmark month for the framework. We shipped **v3.11.0 (Harbinger
 
 ::: success
 
-Cool example of the month: v0 Expansion Panel in VPlay by johnleider
+Cool example of the month: [v0 Expansion Panel in VPlay](https://vtfy.link/i5LxmQ) by [johnleider](https://github.com/johnleider)
 
 :::
 
@@ -52,7 +65,7 @@ Cool example of the month: v0 Expansion Panel in VPlay by johnleider
 
 November delivered seven releases culminating in **v3.11.0 (Harbinger)**, our most feature-rich release since v3.10. Two components graduated from labs to core, and we shipped significant enhancements across date/time pickers, tabs, and overlay components.
 
-
+![November Releases Banner](https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/releases.png "November Releases Banner")
 
 ### Key Improvements
 
@@ -68,11 +81,11 @@ View the complete list of changes in the [Full Changelog](#november-2025-changel
 
 **Details:**
 
-* v3.10.9
-* v3.10.10
-* v3.10.11
-* v3.10.12
-* v3.11.0
+* [v3.10.9](https://vuetifyjs.com/getting-started/release-notes/?version=v3.10.9)
+* [v3.10.10](https://vuetifyjs.com/getting-started/release-notes/?version=v3.10.10)
+* [v3.10.11](https://vuetifyjs.com/getting-started/release-notes/?version=v3.10.11)
+* [v3.10.12](https://vuetifyjs.com/getting-started/release-notes/?version=v3.10.12)
+* [v3.11.0](https://vuetifyjs.com/getting-started/release-notes/?version=v3.11.0)
 
 ---
 
@@ -90,9 +103,9 @@ The CLI will provide streamlined project scaffolding, component generation, and 
 
 **Details:**
 
-* Vuetify Bin
-* Vuetify Snips
-* Vuetify Play
+* [Vuetify Bin](https://bin.vuetifyjs.com/)
+* [Vuetify Snips](https://snips.vuetifyjs.com/)
+* [Vuetify Play](https://play.vuetifyjs.com/)
 
 ---
 
@@ -110,23 +123,23 @@ The date and time picker components received significant attention this month, b
 
 A new input variant allows users to type time values directly without using the dial interface—perfect for power users and keyboard-first workflows.
 
-
+![VTimePicker Input Variant](https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/vtimepicker-input.png "VTimePicker Input Variant")
 
 **VDatePicker MD3 Controls**
 
 Control variants have been aligned with Material Design 3, providing a more polished and consistent appearance.
 
-
+<!-- replace height with auto before releasing -->
 <video width="100%" height="300" loop controls class="mb-4">
   <source src="https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/vdatepicker-md3.mp4" type="video/mp4"></source>
 </video>
 
 **Details:**
 
-* VTimePicker input variant PR#21601
-* VDatePicker MD3 alignment PR#21589
-* VDatePicker landscape mode PR#22305
-* VDateInput min/max fix PR#22295
+* [VTimePicker input variant PR#21601](https://github.com/vuetifyjs/vuetify/pull/21601)
+* [VDatePicker MD3 alignment PR#21589](https://github.com/vuetifyjs/vuetify/pull/21589)
+* [VDatePicker landscape mode PR#22305](https://github.com/vuetifyjs/vuetify/pull/22305)
+* [VDateInput min/max fix PR#22295](https://github.com/vuetifyjs/vuetify/pull/22295)
 
 ### Component Refinements
 
@@ -136,7 +149,7 @@ Control variants have been aligned with Material Design 3, providing a more poli
 * **VOverlay**: Added `viewport-margin` prop for better positioning control
 * **VNavigationDrawer**: New `retain-focus` prop to control focus behavior
 
-
+<!-- replace height with auto before releasing -->
 <video width="100%" height="300" loop controls class="mb-4">
   <source src="https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/vtabs-slider.mp4" type="video/mp4"></source>
 </video>
@@ -159,17 +172,17 @@ Control variants have been aligned with Material Design 3, providing a more poli
 
 **Details:**
 
-* VTabs inset PR#22221
-* VTabs slider transition PR#19556
-* VOverlay viewport-margin PR#22243
-* VNavigationDrawer retain-focus PR#22106
-* VTextarea max-height PR#22286
-* VSelect auto-select-first PR#22312
-* VCombobox line breaks PR#22304
-* VTreeview performance PR#22255
-* VList prepend-gap/indent PR#20616
-* VBreadcrumbs props PR#22213
-* Theme layers PR#22215
+* [VTabs inset PR#22221](https://github.com/vuetifyjs/vuetify/pull/22221)
+* [VTabs slider transition PR#19556](https://github.com/vuetifyjs/vuetify/pull/19556)
+* [VOverlay viewport-margin PR#22243](https://github.com/vuetifyjs/vuetify/pull/22243)
+* [VNavigationDrawer retain-focus PR#22106](https://github.com/vuetifyjs/vuetify/pull/22106)
+* [VTextarea max-height PR#22286](https://github.com/vuetifyjs/vuetify/pull/22286)
+* [VSelect auto-select-first PR#22312](https://github.com/vuetifyjs/vuetify/pull/22312)
+* [VCombobox line breaks PR#22304](https://github.com/vuetifyjs/vuetify/pull/22304)
+* [VTreeview performance PR#22255](https://github.com/vuetifyjs/vuetify/pull/22255)
+* [VList prepend-gap/indent PR#20616](https://github.com/vuetifyjs/vuetify/pull/20616)
+* [VBreadcrumbs props PR#22213](https://github.com/vuetifyjs/vuetify/pull/22213)
+* [Theme layers PR#22215](https://github.com/vuetifyjs/vuetify/pull/22215)
 
 ---
 
@@ -201,8 +214,8 @@ To use the hosted MCP server with Claude Desktop or other MCP clients:
 
 **Details:**
 
-* Vuetify MCP GitHub Repository
-* Model Context Protocol Documentation
+* [Vuetify MCP GitHub Repository](https://github.com/vuetifyjs/mcp)
+* [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
 
 ---
 
@@ -212,7 +225,7 @@ To use the hosted MCP server with Claude Desktop or other MCP clients:
 
 November was our most active month yet for Vuetify0, with 109 commits and 5 releases (v0.0.10 through v0.0.14). The focus was on performance optimization and type safety improvements.
 
-
+![Vuetify0 Type Safety](https://cdn.vuetifyjs.com/docs/images/blog/november-2025-update/v0.png "Vuetify0 Type Safety")
 
 **Performance Optimizations**
 
@@ -247,9 +260,9 @@ December will focus on expanding the component library and preparing integration
 
 **Details:**
 
-* Vuetify0 Documentation
-* Performance optimization PR#48
-* Type safety PR#53
+* [Vuetify0 Documentation](https://0.vuetifyjs.com/)
+* [Performance optimization PR#48](https://github.com/vuetifyjs/0/pull/48)
+* [Type safety PR#53](https://github.com/vuetifyjs/0/pull/53)
 
 ---
 
@@ -272,44 +285,44 @@ The following section provides an overview of the changes made in November 2025,
 
 ### :rocket: Features
 
-* **flex:** add justify-items utilities (#22346) (pgalhardo)
-* **VBreadcrumbs:** pass props and width to items (#22213) (J-Sek)
-* **VCombobox:** create new items when pasting with line breaks (#22304) (ikushum)
-* **VDatePicker:** align control variants with MD3 (#21589) (J-Sek)
-* **VList:** add `prepend-gap` and `indent` props (#20616) (yuwu9145)
-* **VNavigationDrawer, VOverlay:** add `retain-focus` prop (#22106) (J-Sek)
-* **VOverlay:** add `viewport-margin` prop (#22243) (J-Sek)
-* **VSelect:** add `auto-select-first` prop (#22312) (J-Sek)
-* **VSelect:** apply compatible itemProps to chips (#22339) (KaelWD)
-* **VStepper:** add new item-props prop (#20651) (johnleider)
-* **VTabs:** add `inset` prop (#22221) (J-Sek)
-* **VTabs:** add new prop, slider transition (#19556) (johnleider)
-* **VTextarea:** add `max-height` prop (#22286) (J-Sek)
-* **VTimePicker:** input variant (#21601) (J-Sek)
-* **theme:** add layers option (#22215) (Niki2k1)
-* **typography:** add font-weight semibold helper class (#20586) (FraCata00)
+* **flex:** add justify-items utilities ([#22346](https://github.com/vuetifyjs/vuetify/issues/22346)) ([pgalhardo](https://github.com/pgalhardo))
+* **VBreadcrumbs:** pass props and width to items ([#22213](https://github.com/vuetifyjs/vuetify/issues/22213)) ([J-Sek](https://github.com/J-Sek))
+* **VCombobox:** create new items when pasting with line breaks ([#22304](https://github.com/vuetifyjs/vuetify/issues/22304)) ([ikushum](https://github.com/ikushum))
+* **VDatePicker:** align control variants with MD3 ([#21589](https://github.com/vuetifyjs/vuetify/issues/21589)) ([J-Sek](https://github.com/J-Sek))
+* **VList:** add `prepend-gap` and `indent` props ([#20616](https://github.com/vuetifyjs/vuetify/issues/20616)) ([yuwu9145](https://github.com/yuwu9145))
+* **VNavigationDrawer, VOverlay:** add `retain-focus` prop ([#22106](https://github.com/vuetifyjs/vuetify/issues/22106)) ([J-Sek](https://github.com/J-Sek))
+* **VOverlay:** add `viewport-margin` prop ([#22243](https://github.com/vuetifyjs/vuetify/issues/22243)) ([J-Sek](https://github.com/J-Sek))
+* **VSelect:** add `auto-select-first` prop ([#22312](https://github.com/vuetifyjs/vuetify/issues/22312)) ([J-Sek](https://github.com/J-Sek))
+* **VSelect:** apply compatible itemProps to chips ([#22339](https://github.com/vuetifyjs/vuetify/issues/22339)) ([KaelWD](https://github.com/KaelWD))
+* **VStepper:** add new item-props prop ([#20651](https://github.com/vuetifyjs/vuetify/issues/20651)) ([johnleider](https://github.com/johnleider))
+* **VTabs:** add `inset` prop ([#22221](https://github.com/vuetifyjs/vuetify/issues/22221)) ([J-Sek](https://github.com/J-Sek))
+* **VTabs:** add new prop, slider transition ([#19556](https://github.com/vuetifyjs/vuetify/issues/19556)) ([johnleider](https://github.com/johnleider))
+* **VTextarea:** add `max-height` prop ([#22286](https://github.com/vuetifyjs/vuetify/issues/22286)) ([J-Sek](https://github.com/J-Sek))
+* **VTimePicker:** input variant ([#21601](https://github.com/vuetifyjs/vuetify/issues/21601)) ([J-Sek](https://github.com/J-Sek))
+* **theme:** add layers option ([#22215](https://github.com/vuetifyjs/vuetify/issues/22215)) ([Niki2k1](https://github.com/Niki2k1))
+* **typography:** add font-weight semibold helper class ([#20586](https://github.com/vuetifyjs/vuetify/issues/20586)) ([FraCata00](https://github.com/FraCata00))
 
 ### :wrench: Bug Fixes
 
-* **v-tooltip:** prevent showing empty tooltip (#22347) (Haviles04)
-* **VAvatar:** update background variable to use RGB format (#22310) (juanjcardona13)
-* **VBtnToggle:** remove semicolon from Sass (#22293) (methompson)
-* **VBtnToggle:** render selected in forced-colors mode (#22279) (06b)
-* **VCalendar:** calculate week numbers using current locale (#22341) (J-Sek)
-* **VCalendar:** correct interval and event offset with custom firstTime (#22343) (KaelWD)
-* **VCalendar:** day button font size and no active state (#22336) (J-Sek)
-* **VDateInput:** min/max with built-in adapter (#22295) (J-Sek)
-* **VDatePicker:** support landscape mode (#22305) (ikushum)
-* **VField:** hide progress border in forced-colors mode (#22316) (06b)
-* **VField:** remove details prop from makeVFieldProps (#22268) (pgalhardo)
-* **VHotkey:** inline alignment, sizing consistency, slash separator (#22321) (J-Sek)
-* **VInfiniteScroll:** hide side element when empty (#21749) (J-Sek)
-* **VList:** correct styles for spacing with `nav` prop (#22254) (J-Sek)
-* **VMaskInput:** Fixes error when mask input is cleared (#22176) (ikushum)
-* **VRating:** correct keyboard controls (#22314) (J-Sek)
-* **VSelect:** Use hidden select for native form submissions (#22330) (ikushum)
-* **VTab:** render selected in forced-colors mode (#22271) (06b)
-* **VTreeview:** faster interactions with large trees (#22255) (J-Sek)
+* **v-tooltip:** prevent showing empty tooltip ([#22347](https://github.com/vuetifyjs/vuetify/issues/22347)) ([Haviles04](https://github.com/Haviles04))
+* **VAvatar:** update background variable to use RGB format ([#22310](https://github.com/vuetifyjs/vuetify/issues/22310)) ([juanjcardona13](https://github.com/juanjcardona13))
+* **VBtnToggle:** remove semicolon from Sass ([#22293](https://github.com/vuetifyjs/vuetify/issues/22293)) ([methompson](https://github.com/methompson))
+* **VBtnToggle:** render selected in forced-colors mode ([#22279](https://github.com/vuetifyjs/vuetify/issues/22279)) ([06b](https://github.com/06b))
+* **VCalendar:** calculate week numbers using current locale ([#22341](https://github.com/vuetifyjs/vuetify/issues/22341)) ([J-Sek](https://github.com/J-Sek))
+* **VCalendar:** correct interval and event offset with custom firstTime ([#22343](https://github.com/vuetifyjs/vuetify/issues/22343)) ([KaelWD](https://github.com/KaelWD))
+* **VCalendar:** day button font size and no active state ([#22336](https://github.com/vuetifyjs/vuetify/issues/22336)) ([J-Sek](https://github.com/J-Sek))
+* **VDateInput:** min/max with built-in adapter ([#22295](https://github.com/vuetifyjs/vuetify/issues/22295)) ([J-Sek](https://github.com/J-Sek))
+* **VDatePicker:** support landscape mode ([#22305](https://github.com/vuetifyjs/vuetify/issues/22305)) ([ikushum](https://github.com/ikushum))
+* **VField:** hide progress border in forced-colors mode ([#22316](https://github.com/vuetifyjs/vuetify/issues/22316)) ([06b](https://github.com/06b))
+* **VField:** remove details prop from makeVFieldProps ([#22268](https://github.com/vuetifyjs/vuetify/issues/22268)) ([pgalhardo](https://github.com/pgalhardo))
+* **VHotkey:** inline alignment, sizing consistency, slash separator ([#22321](https://github.com/vuetifyjs/vuetify/issues/22321)) ([J-Sek](https://github.com/J-Sek))
+* **VInfiniteScroll:** hide side element when empty ([#21749](https://github.com/vuetifyjs/vuetify/issues/21749)) ([J-Sek](https://github.com/J-Sek))
+* **VList:** correct styles for spacing with `nav` prop ([#22254](https://github.com/vuetifyjs/vuetify/issues/22254)) ([J-Sek](https://github.com/J-Sek))
+* **VMaskInput:** Fixes error when mask input is cleared ([#22176](https://github.com/vuetifyjs/vuetify/issues/22176)) ([ikushum](https://github.com/ikushum))
+* **VRating:** correct keyboard controls ([#22314](https://github.com/vuetifyjs/vuetify/issues/22314)) ([J-Sek](https://github.com/J-Sek))
+* **VSelect:** Use hidden select for native form submissions ([#22330](https://github.com/vuetifyjs/vuetify/issues/22330)) ([ikushum](https://github.com/ikushum))
+* **VTab:** render selected in forced-colors mode ([#22271](https://github.com/vuetifyjs/vuetify/issues/22271)) ([06b](https://github.com/06b))
+* **VTreeview:** faster interactions with large trees ([#22255](https://github.com/vuetifyjs/vuetify/issues/22255)) ([J-Sek](https://github.com/J-Sek))
 
 ### :test_tube: Labs
 
@@ -328,4 +341,4 @@ Thank you for being part of the Vuetify community. See you in December!
 
 ---
 
-*Stay connected with Vuetify updates through our GitHub repository, Discord community, and follow @vuetifyjs for the latest announcements. The best is yet to come!*
+*Stay connected with Vuetify updates through our [GitHub repository](https://github.com/vuetifyjs/vuetify), [Discord community](https://discord.gg/vuetify), and follow [@vuetifyjs](https://twitter.com/vuetifyjs) for the latest announcements. The best is yet to come!*

@@ -41,7 +41,7 @@ The sheet component has support for elevation, rounded corners, color, and more.
 
 The `v-sheet` component contains only a default slot.
 
-
+![Sheet Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-sheet/v-sheet-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

@@ -20,14 +20,14 @@ Learn more about what Vuetify is, how to create an application from scratch, bro
 
 ## What is Vuetify?
 
-Since its initial release in 2014, Vue.js has grown to be among the most popular JavaScript frameworks in the world. One of the reasons for this popularity is the wide use of components which enable developers to create small modules to be used and re-used throughout an application. Vuetify is a collection of pre-made components paired with powerful features such [dynamic themes](/features/theme/), [global defaults](/features/global-configuration/), [application layouts](/features/application-layout/), and more. Its goal is to provide developers with all of the necessary tools to build rich and engaging user experiences.
+Since its initial release in 2014, [Vue.js](https://vuejs.org/) has grown to be among the most popular JavaScript frameworks in the world. One of the reasons for this popularity is the wide use of [components](https://vuejs.org/guide/essentials/component-basics.html) which enable developers to create small modules to be used and re-used throughout an application. Vuetify is a collection of pre-made components paired with powerful features such [dynamic themes](/features/theme/), [global defaults](/features/global-configuration/), [application layouts](/features/application-layout/), and more. Its goal is to provide developers with all of the necessary tools to build rich and engaging user experiences.
 
 * [Why you should use it](#why-vuetify)
 * [Features at a glance](#feature-guides)
 
 ## Getting started
 
-The fastest way to try Vuetify is in the browser at Vuetify Play. For a complete list of installation options please navigate to the [Installation page](/getting-started/installation/).
+The fastest way to try Vuetify is in the browser at [Vuetify Play](https://play.vuetifyjs.com/). For a complete list of installation options please navigate to the [Installation page](/getting-started/installation/).
 
 ## Why Vuetify? { id="why-vuetify" }
 
@@ -35,25 +35,25 @@ Vuetify is a powerful Vue Component Framework built from the ground up to be eas
 
 ### It's free { id="its-free" }
 
-Vuetify is an Open Source project available for free under the MIT licensed. Additionally, Vuetify's source code is available on GitHub, allowing developers to modify and contribute to its development if they choose to do so.
+Vuetify is an Open Source project available for free under the [MIT licensed](https://opensource.org/licenses/MIT). Additionally, Vuetify's source code is available on GitHub, allowing developers to modify and contribute to its development if they choose to do so.
 
 ### Flexible components
 
-Every component in Vuetify is handcrafted under the guise of Google's Material Design specification and comes with hundreds of customization options that fit any style or design; even if it's not Material. Write Vue templates that are as concise or verbose as you want using exclusively or in combination, **props**, **slots**, and **components**.
+Every component in Vuetify is handcrafted under the guise of Google's [Material Design specification](https://material.io/) and comes with hundreds of customization options that fit any style or design; even if it's not Material. Write Vue templates that are as concise or verbose as you want using exclusively or in combination, **props**, **slots**, and **components**.
 
 ### Tooling
 
 Vuetify has a large ecosystem of supporting tools that enrich the development experience that range from project creation to design UI kits.
 
-*  Figma UI Component Kit
-*  First-party Vite support
-*  Pre-configured Vue 3 applications for TypeScript and JavaScript
-*  Intellisense & autocomplete support for VSCode and JetBrains products
-*  [Wireframe examples](/getting-started/wireframes/)
+* 🎨 [Figma UI Component Kit](https://store.vuetifyjs.com/products/vuetify-ui-kit-figma)
+* ⚡ [First-party Vite support](https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin)
+* 🏗️ [Pre-configured Vue 3 applications for TypeScript and JavaScript](https://tryvuetify.com)
+* ⌨️ Intellisense & autocomplete support for [VSCode](https://code.visualstudio.com/docs/editor/intellisense) and [JetBrains](https://www.jetbrains.com/help/rider/Auto-Completing_Code.html) products
+* 🖼️ [Wireframe examples](/getting-started/wireframes/)
 
 ### Community
 
-When you develop with Vuetify, you are never alone. Stuck on a problem? Take advantage of our massive Discord community and collaborate with other Vuetify developers in one of our public help channels. Need a more personalized support solution? Vuetify offers [Enterprise support](/introduction/enterprise-support/) with options tailored to individuals and businesses. Check out some other ways to [Sponsor Vuetify development](/introduction/sponsors-and-backers/).
+When you develop with Vuetify, you are never alone. Stuck on a problem? Take advantage of our massive [Discord community](https://community.vuetifyjs.com/) and collaborate with other Vuetify developers in one of our public help channels. Need a more personalized support solution? Vuetify offers [Enterprise support](/introduction/enterprise-support/) with options tailored to individuals and businesses. Check out some other ways to [Sponsor Vuetify development](/introduction/sponsors-and-backers/).
 
 <PromotedPromoted slug="vuetify-discord" />
 
@@ -61,9 +61,9 @@ When you develop with Vuetify, you are never alone. Stuck on a problem? Take adv
 
 Vuetify offers an array of support services designed to help you get the most out of your application. Let our experience team provide you with the tools that you need to succeed with:
 
-*  Vuetify version upgrades
-*  Performance review & analysis
-*  SLA & direct support
+* ↗️ Vuetify version upgrades
+* 📊 Performance review & analysis
+* ⛑️ SLA & direct support
 
 For more information regarding our professional support options, navigate to our [Enterprise support](/introduction/enterprise-support/) page.
 
@@ -71,9 +71,9 @@ For more information regarding our professional support options, navigate to our
 
 Vuetify has been in active development since 2016 and is constantly responding to community issues and reports at breakneck speed, allowing you to get your hands on bug fixes and enhancements more often. Our overall release cadence typically follows:
 
-*  PATCH **(Weekly)**
-*  MINOR **(Quarterly)**
-*  MAJOR **(Bi-yearly to Yearly)**
+* 🔨 PATCH **(Weekly)**
+* ⛏️ MINOR **(Quarterly)**
+* ⚒️ MAJOR **(Bi-yearly to Yearly)**
 
 In addition, after every MAJOR release, the previous version is still maintained with 18 months of [Long-term support](/introduction/long-term-support/).
 
@@ -101,4 +101,4 @@ Learn more about the inner workings of Vuetify and become a skilled **v-develope
 | [Treeshaking](/features/treeshaking/) | Advanced | 15 min |
 | [Hotkeys](/features/hotkey/) | Advanced | 10 min |
 
-Can't find what you're looking for? Help us improve! Please reach out to [hello@vuetifyjs.com](mailto:hello@vuetifyjs.com) with your feedback or join us in the Vuetify Discord community.
+Can't find what you're looking for? Help us improve! Please reach out to [hello@vuetifyjs.com](mailto:hello@vuetifyjs.com) with your feedback or join us in the Vuetify [Discord community](https://community.vuetifyjs.com/).

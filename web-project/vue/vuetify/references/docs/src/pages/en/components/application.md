@@ -36,7 +36,7 @@ In Vuetify, the `v-app` component is a convenient way to dynamically modify your
   More information on how to interact with the root sizing and styling is on the [Application](/features/application-layout/) page.
 :::
 
-When placing your application level components, the order matters. Elements are stacked based on when they register and are rendered in the DOM after the first **nextTick** (to account for suspense). Layouts utilize suspense to allow all layout components to register before rendering the initial layout.
+When placing your application level components, the order matters. Elements are stacked based on when they register and are rendered in the DOM after the first **nextTick** (to account for suspense). Layouts utilize [suspense](https://vuejs.org/guide/built-ins/suspense) to allow all layout components to register before rendering the initial layout.
 
 The following example demonstrates how the `v-app-bar` component takes priority over `v-navigation-drawer` because of its rendering order:
 

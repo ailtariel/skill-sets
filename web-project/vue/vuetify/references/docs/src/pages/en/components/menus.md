@@ -49,11 +49,35 @@ The third one is to supply a CSS selector string to **activator** prop. This all
 
 ### Props
 
+<!-- #### Absolute
 
+Menus can also be placed absolutely on top of the activator element using the **absolute** prop. Try clicking anywhere on the image.
 
+<ExamplesExample file="v-menu/prop-absolute" />
 
+#### Absolute without activator
 
+Menus can also be used without an activator by using **absolute** together with the props **position-x** and **position-y**. Try right-clicking anywhere on the image.
 
+<ExamplesExample file="v-menu/prop-absolute-without-activator" /> -->
+
+<!-- #### Close on click
+
+Menu can be closed when lost focus.
+
+<ExamplesExample file="v-menu/prop-close-on-click" />
+
+#### Close on content click
+
+You can configure whether `v-menu` should be closed when its content is clicked.
+
+<ExamplesExample file="v-menu/prop-close-on-content-click" /> -->
+
+<!-- #### Disabled
+
+You can disable the menu. Disabled menus can't be opened.
+
+<ExamplesExample file="v-menu/prop-disabled" /> -->
 
 #### Location
 
@@ -100,7 +124,7 @@ With the new `v-slot` syntax, nested activators such as those seen with a `v-men
 
 #### Transitions
 
-Vuetify comes with [several standard transitions](/styles/transitions#api) that you can use. You can also create your own and pass it as the transition argument. For an example of how the stock transitions are constructed, visit here.
+Vuetify comes with [several standard transitions](/styles/transitions#api) that you can use. You can also create your own and pass it as the transition argument. For an example of how the stock transitions are constructed, visit [here](https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts).
 
 <ExamplesExample file="v-menu/misc-transition" />
 
@@ -109,6 +133,12 @@ Vuetify comes with [several standard transitions](/styles/transitions#api) that 
 A menu can be configured to be static when opened, allowing it to function as a popover. This can be useful when there are multiple interactive items within the menu contents.
 
 <ExamplesExample file="v-menu/misc-popover" />
+
+#### Gliding navigation
+
+A single `v-menu` can be reused across multiple activators to create a gliding navigation bar. As the user hovers between buttons, the menu smoothly transitions to the new activator using a CSS transition on its position.
+
+<ExamplesExample file="v-menu/misc-gliding-nav" />
 
 #### Use In components
 

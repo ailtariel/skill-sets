@@ -52,7 +52,7 @@ A **load** event will be emitted when the component needs to load more content. 
 
 The `v-infinite-scroll` works with any content in its default slot.
 
-
+![Infinite scroll Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-infinite-scroll/v-infinite-scroll-anatomy.png)
 
 | Element / Area | Description                                                              |
 |----------------|-----------------------------------------|
@@ -101,7 +101,7 @@ The default load more button and loading spinner can be colored with the **color
 
 The `v-infinite-scroll` component exposes several slots that allow you to further customize its behaviour.
 
-
+![Infinite scroll Slots](https://cdn.vuetifyjs.com/docs/images/components/v-infinite-scroll/v-infinite-scroll-slots.png)
 
 | Element / Area | Description |
 | - | - |

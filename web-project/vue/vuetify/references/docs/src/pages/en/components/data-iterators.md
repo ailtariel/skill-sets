@@ -44,7 +44,7 @@ The recommended placement of elements inside of a `v-data-iterator` are:
 * Place content after the header
 * Place a [v-pagination](/components/paginations/) below the main content
 
-{ height=392 }
+![Data iterator Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-data-iterator/v-data-iterator-anatomy.png){ height=392 }
 
 | Element / Area | Description |
 | - | - |
@@ -73,6 +73,14 @@ The following code snippet is an example of a basic `v-data-iterator` component:
 ## Examples
 
 The following are a collection of examples that demonstrate more advanced and real world use of the `v-data-iterator` component.
+
+### Props
+
+#### Grouping
+
+Use the **group-by** prop to group items, and **v-model:opened** to control which groups are open. The **group-key** prop allows customizing group IDs, and **open-all** opens all groups by default.
+
+<ExamplesExample file="v-data-iterator/prop-grouping" />
 
 ### Slots
 

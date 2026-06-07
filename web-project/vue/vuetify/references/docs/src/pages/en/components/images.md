@@ -16,7 +16,7 @@ features:
 
 # Images
 
-The `v-img` component is packed with features to support rich media. Combined with the vuetify-loader, you can add dynamic progressive images to provide a better user experience.
+The `v-img` component is packed with features to support rich media. Combined with the [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader), you can add dynamic progressive images to provide a better user experience.
 
 <PageFeatures />
 
@@ -114,7 +114,7 @@ This will behave similarly to:
 </picture>
 ```
 
-`srcset` and `media` attributes can also be used for art direction or alternate sizes, see MDN for more.
+`srcset` and `media` attributes can also be used for art direction or alternate sizes, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) for more.
 
 #### Grid
 

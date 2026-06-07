@@ -10,7 +10,7 @@ meta:
 
 ---
 
- John Leider •  April 8th, 2025
+🖊️ John Leider • 📅 April 8th, 2025
 
 <PromotedEntry />
 
@@ -20,7 +20,7 @@ meta:
 
 Today we are excited to announce the release of Vuetify v3.8 "Andromeda"!
 
-This minor release contains no breaking changes and is packed with new features, improvements, and bug fixes. This blog post will highlight some of the most notable changes—for a full list of changes and new features, please see the full changelog.
+This minor release contains no breaking changes and is packed with new features, improvements, and bug fixes. This blog post will highlight some of the most notable changes—for a full list of changes and new features, please see [the full changelog](https://vuetifyjs.com/getting-started/release-notes/?version=v3.8.0).
 
 ---
 
@@ -47,22 +47,22 @@ In v3.8, we have made several improvements to form controls, including new styli
 Search terms that match multiple words in the item text will now be highlighted in VAutocomplete and VCombobox. This enhancement makes it easier for users to see how their search terms match available options, improving the overall search experience.
 
 **Before:**
-{ height=300 }
+![Image of Autocomplete with single word highlighting](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/autocomplete-before.png "Single-word highlighting"){ height=300 }
 
 **After:**
-{ height=300 }
+![Image of Autocomplete with multi word highlighting](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/autocomplete-after.png "Multi-word highlighting"){ height=300 }
 
-**Details:** PR#16462
+**Details:** [PR#16462](https://github.com/vuetifyjs/vuetify/pull/16462)
 
 ### Input icon states
 
 In earlier versions of Vuetify, focused inputs would add color to their icons. This is now possible using the new **icon-color** and **glow** props. The former allows you to set the default color of the icon, when combined with the latter, the icon will change color when the input is focused.
 
-{ height=300 }
+![Gif of input icon states](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/icon-color-glow-prop.gif "Input icon states"){ height=300 }
 
 This is perfect for drawing attention to active inputs or creating dynamic, responsive forms.
 
-**Details:** PR#21076
+**Details:** [PR#21076](https://github.com/vuetifyjs/vuetify/pull/21076)
 
 ## New components
 
@@ -70,18 +70,18 @@ Both VNumberInput and VSnackbarQueue have been promoted from labs to the core fr
 
 ### VNumberInput
 
-The v-number-input component has moved from Labs to the Core framework in v3.8. It's intended to be a replacement for the standard `<input type="number">` and supports all of the standard Vuetify input variant props.
+The [v-number-input](https://vuetifyjs.com/components/number-inputs/) component has moved from Labs to the Core framework in v3.8. It's intended to be a replacement for the standard `<input type="number">` and supports all of the standard Vuetify input variant props.
 
-{ height=300 }
+![Gif of the NumberInput component](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/number-input.gif "VNumberInput component"){ height=300 }
 
 **Details:**
 
-- Documentation
-- PR#18162
+- [Documentation](https://vuetifyjs.com/components/number-inputs/)
+- [PR#18162](https://github.com/vuetifyjs/vuetify/pull/18162)
 
 ### VSnackbarQueue
 
-The v-snackbar-queue component has moved from Labs to the Core framework in v3.8. This component makes it easy to create a queue of snackbars that can be displayed one after the other.
+The [v-snackbar-queue](https://vuetifyjs.com/components/snackbar-queue/) component has moved from Labs to the Core framework in v3.8. This component makes it easy to create a queue of snackbars that can be displayed one after the other.
 
 Setting up a queue of snackbars is as simple as creating a store that holds the queue and passing it to the VSnackbarQueue component.
 
@@ -126,12 +126,12 @@ export const useQueueStore = defineStore('Queue', () => {
 </script>
 ```
 
-Queue items support all v-snackbar props, including **timeout** and **color**.
+Queue items support all [v-snackbar](https://vuetifyjs.com/components/snackbars/) props, including **timeout** and **color**.
 
 **Details:**
 
-- Documentation
-- PR#19629
+- [Documentation](https://vuetifyjs.com/components/snackbar-queue/)
+- [PR#19629](https://github.com/vuetifyjs/vuetify/pull/19629)
 
 ## Other updates
 
@@ -141,17 +141,17 @@ Some other small updates in v3.8 involve quality of life improvements to existin
 
 In v3.8, when using the **show-select** property and VDataTable, you can hold the <v-kbd>shift</v-kbd> key when making a selection to select a range of items.
 
-{ height=500 }
+![Gif of VDataTable selection](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/data-table-select.gif "v-data-table selection"){ height=500 }
 
-**Details:** Commit c9a2a22
+**Details:** [Commit c9a2a22](https://github.com/vuetifyjs/vuetify/commit/c9a2a2269b0492cc3cd0b757888be9ddd96316ba)
 
 ### VTooltip interactive
 
-v3.8 introduces the **interactive** property to the v-tooltip component. When enabled, this allows users to interact with and select text within the tooltip.
+v3.8 introduces the **interactive** property to the [v-tooltip](https://vuetifyjs.com/components/tooltips/) component. When enabled, this allows users to interact with and select text within the tooltip.
 
-{ height=300 }
+![Gif of v-tooltip interactive](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/tooltip-interactive.gif "v-tooltip interactive"){ height=300 }
 
-**Details:** Commit 1599512
+**Details:** [Commit 1599512](https://github.com/vuetifyjs/vuetify/commit/159951278e9a27309d4d1eb633b426c770989584)
 
 ## Labs
 
@@ -159,19 +159,19 @@ The latest version of Vuetify also includes a number of updates to existing Labs
 
 ### VDateInput
 
-The v-date-input component received multiple quality of life improvements, including:
+The [v-date-input](https://vuetifyjs.com/components/date-inputs) component received multiple quality of life improvements, including:
 
 - Now has actions hidden by default, reducing screen clutter
 - Improved inputmode usage on mobile
 - Normalized control button sizes giving the component a more consistent look
 
-{ height=300 }
+![Image of v-date-input](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/date-input-enhancements.png "v-date-input component"){ height=300 }
 
 This component is getting close to being ready for production, keep an eye out for it in the next release!
 
 ### useRules composable
 
-The useRules composable is a new way to propagate shared rules through your application with full localization support. After following the Installation Guide, you can use the composable in your components.
+The useRules composable is a new way to propagate shared rules through your application with full localization support. After following the [Installation Guide](https://vuetifyjs.com/features/rules/#installation), you can use the composable in your components.
 
 ```html
 <template>
@@ -217,9 +217,9 @@ This simplifies managing validation rules across your app, ensuring consistency 
 
 ### VIconBtn
 
-v-icon-btn is a new component in testing that's intended to bridge the gap between VBtn and VIcon. Its size is meant to be more intentional and is ideal for compact UI patterns like toolbars, icon-only lists, or action grids.
+[v-icon-btn](https://vuetifyjs.com/components/icon-buttons/) is a new component in testing that's intended to bridge the gap between VBtn and VIcon. Its size is meant to be more intentional and is ideal for compact UI patterns like toolbars, icon-only lists, or action grids.
 
-{ height=300 }
+![Gif of v-icon-btn](https://cdn.vuetifyjs.com/docs/images/blog/announcing-vuetify-3.8/icon-btn.gif "v-icon-btn component"){ height=300 }
 
 We're also experimenting with a new way of mapping sizes, moving the configuration from SCSS to props.
 
@@ -275,10 +275,10 @@ Moving to a system like this also opens up the ability to configure your own siz
 }
 ```
 
-This is still in testing so please give us your feedback by dropping a line on our Discord
+This is still in testing so please give us your feedback by dropping a line on our [Discord](https://community.vuetifyjs.com/)
 
-**Details:** PR#21114
+**Details:** [PR#21114](https://github.com/vuetifyjs/vuetify/pull/21114)
 
 ---
 
-For a complete list of all the changes and features in v3.8, please see the full changelog.
+For a complete list of all the changes and features in v3.8, please see the [full changelog](https://vuetifyjs.com/getting-started/release-notes/?version=v3.8.0).

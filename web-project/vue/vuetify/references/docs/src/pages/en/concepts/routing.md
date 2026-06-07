@@ -20,7 +20,7 @@ Routing is the process of navigating between different views or pages in an appl
 
 ## Guide
 
-Vue Router is the official router for Vue. It allows you to define routes and map them to components, enabling navigation between different views in your application.
+[Vue Router](https://router.vuejs.org/) is the official router for Vue. It allows you to define routes and map them to components, enabling navigation between different views in your application.
 
 The following components have built in support for routing:
 
@@ -30,7 +30,7 @@ The following components have built in support for routing:
 - [v-chip](/api/v-chip/)
 - [v-list](/api/v-list-item/)
 
-These components can act like a router-link and have access to props such as **to** and **exact**:
+These components can act like a [router-link](https://router.vuejs.org/guide/advanced/extending-router-link.html) and have access to props such as **to** and **exact**:
 
 ```html
 <v-btn to="/home" text="Home"></v-btn>

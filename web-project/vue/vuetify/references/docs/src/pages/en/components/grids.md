@@ -25,7 +25,7 @@ The grid is used to create specific layouts within an application's content.  It
 
 ## Usage
 
-The Vuetify grid is heavily inspired by the Bootstrap grid. It is implemented by using a series of containers, rows, and columns to layout and align content. If you are new to flexbox, read the CSS Tricks flexbox guide for background, terminology, guidelines, and code snippets.
+The Vuetify grid is heavily inspired by the [Bootstrap grid](https://getbootstrap.com/docs/4.0/layout/grid/). It is implemented by using a series of containers, rows, and columns to layout and align content. If you are new to flexbox, read the [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
 
 <ExamplesExample file="grid/usage" />
 
@@ -189,6 +189,14 @@ The `v-spacer` component is useful when you want to fill available space or make
 
 <ExamplesExample file="grid/misc-spacer" />
 
+<!-- #### Unique layouts
 
+The power and flexibility of the Vuetify grid system allows you to create amazing user interfaces.
 
+<ExamplesExample file="grid/misc-unique-layouts" /> -->
 
+<!-- #### Variable content width
+
+Assigning breakpoint width for columns can be configured to resize based upon the nature width of their content.
+
+<ExamplesExample file="grid/misc-variable-content" /> -->

@@ -21,11 +21,11 @@ Add regression protection by adding unit tests to your Vuetify application
 
 Unit tests are an important (and sometimes ignored) part of developing applications. They help us secure our processes and workflows, ensuring that the most critical parts of our projects are protected from accidental mistakes or oversights in our development.
 
-Because of this, Vue has its own testing utility called vue-test-utils. It provides useful features for interacting with Vue components and works with many popular test runners.
+Because of this, Vue has its own testing utility called [vue-test-utils](https://test-utils.vuejs.org/). It provides useful features for interacting with Vue components and works with many popular test runners.
 
 ## Using Vite
 
-Vite is a fast, opinionated frontend build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production. It provides a great developer experience and is the recommended build tool for Vuetify applications.
+[Vite](https://vitejs.dev/) is a fast, opinionated frontend build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production. It provides a great developer experience and is the recommended build tool for Vuetify applications.
 
 First, update your **vite.config.js** file to inline the `vuetify` dependency:
 
@@ -47,7 +47,7 @@ export default defineConfig({
 
 ### Setup Vitest
 
-Vitest is a popular test runner that provides a great developer experience. It is fast, easy to use, and provides useful features like snapshot testing. To get started, install the following dependencies:
+[Vitest](https://vitest.dev/) is a popular test runner that provides a great developer experience. It is fast, easy to use, and provides useful features like snapshot testing. To get started, install the following dependencies:
 
 ::: tabs
 
@@ -110,9 +110,9 @@ When testing Vuetify components, we recommend running tests in a real browser en
 
 ### Recommended Test Runners
 
-* Vitest (browser mode) – Fast, Vite-native test runner with browser support.
-* Playwright – End-to-end testing in actual browsers.
-* Cypress – Great for integration and E2E tests.
+* [Vitest (browser mode)](https://vitest.dev/guide/browser/) – Fast, Vite-native test runner with browser support.
+* [Playwright](https://playwright.dev/) – End-to-end testing in actual browsers.
+* [Cypress](https://www.cypress.io/) – Great for integration and E2E tests.
 
 ### Rendering with Vuetify
 
@@ -157,4 +157,4 @@ expect(getByTestId('submit-btn')).toBeInTheDocument()
 
 ### Accessibility Considerations
 
-Tests should respect user accessibility preferences. Configure prefers-reduced-motion when testing animations to avoid flakiness and ensure accessibility compliance.
+Tests should respect user accessibility preferences. Configure [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) when testing animations to avoid flakiness and ensure accessibility compliance.

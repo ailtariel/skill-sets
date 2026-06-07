@@ -46,7 +46,7 @@ The recommended components to use inside of a `v-dialog` are:
 * [v-list](/components/lists/)
 * [v-sheet](/components/sheets/)
 
-
+![Dialog Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-dialog/v-dialog-anatomy.png)
 
 | Element / Area | Description                                                              |
 | - | - |

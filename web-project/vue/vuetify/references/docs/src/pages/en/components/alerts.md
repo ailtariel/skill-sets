@@ -45,7 +45,7 @@ The recommended placement of elements inside of `v-alert` is:
 * Place textual content below the title
 * Place closing actions to the far right
 
-
+![Alert Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-alert/v-alert-anatomy.png)
 
 | Element / Area | Description |
 | - | - |
@@ -161,4 +161,4 @@ The **outlined** prop inverts the style of an alert, inheriting the currently ap
 
 ## Accessibility
 
-By default, `v-alert` components are assigned the WAI-ARIA role of **alert** which denotes that the alert \"is a live region with important and usually time-sensitive information.\" When using the **closable** prop, the close icon will receive a corresponding `aria-label`. This value can be modified by changing either the **close-label** prop or globally through customizing the [Internationalization](/features/internationalization)'s default value for the _close_ property.
+By default, `v-alert` components are assigned the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [**alert**](https://www.w3.org/TR/wai-aria/#alert) which denotes that the alert \"is a live region with important and usually time-sensitive information.\" When using the **closable** prop, the close icon will receive a corresponding `aria-label`. This value can be modified by changing either the **close-label** prop or globally through customizing the [Internationalization](/features/internationalization)'s default value for the _close_ property.

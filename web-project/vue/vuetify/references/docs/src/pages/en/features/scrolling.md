@@ -37,7 +37,7 @@ The **goTo** method takes two parameters **target** and **options**. **target** 
 
 <!--## Use with router
 
-The **goTo** function can be individually imported and invoked anywhere. This is particularly useful when hooking up to vue-router.
+The **goTo** function can be individually imported and invoked anywhere. This is particularly useful when hooking up to [vue-router](https://router.vuejs.org/).
 
 ```js { resource="src/router.js" }
 import Router from 'vue-router'

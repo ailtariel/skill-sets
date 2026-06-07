@@ -21,7 +21,7 @@ features:
 
 # Icons
 
-The `v-icon` component provides a large set of glyphs to provide context to various aspects of your application. For a list of all available icons, visit the official Material Design Icons page. To use any of these icons simply use the `mdi-` prefix followed by the icon name.
+The `v-icon` component provides a large set of glyphs to provide context to various aspects of your application. For a list of all available icons, visit the official [Material Design Icons](https://pictogrammers.com/library/mdi/) page. To use any of these icons simply use the `mdi-` prefix followed by the icon name.
 
 <PageFeatures />
 
@@ -51,7 +51,13 @@ Using color helpers you can change the color of an icon from the standard dark a
 
 <ExamplesExample file="v-icon/prop-color" />
 
+<!-- ### Events
 
+#### Click
+
+Binding any click event to `v-icon` will automatically change the cursor to a pointer.
+
+<ExamplesExample file="v-icon/event-click" /> -->
 
 ### Misc
 
@@ -63,7 +69,7 @@ Icons can be used inside of buttons to add emphasis to the action.
 
 #### Font Awesome
 
-Font Awesome is also supported. Simply use the `fa-` prefixed icon name. Please note that you still need to include the Font Awesome icons in your project. For more information on how to install it, please navigate to the [installation page](/features/icon-fonts#install-font-awesome-5-icons)
+[Font Awesome](https://fontawesome.com/icons/) is also supported. Simply use the `fa-` prefixed icon name. Please note that you still need to include the Font Awesome icons in your project. For more information on how to install it, please navigate to the [installation page](/features/icon-fonts#install-font-awesome-5-icons)
 
 ::: info
   Note that this example is using an icon set prefix, because the default icon set in the documentation is `mdi`. You can read more about using multiple icon sets [here](/features/icon-fonts/#multiple-icon-sets)
@@ -73,7 +79,7 @@ Font Awesome is also supported. Simply use the `fa-` prefixed icon name. Please 
 
 #### Material Design
 
-Material Design is also supported. For more information on how to install it please [navigate here](/features/icon-fonts#install-material-icons)
+[Material Design](https://fonts.google.com/icons) is also supported. For more information on how to install it please [navigate here](/features/icon-fonts#install-material-icons)
 
 ::: info
   Note that this example is using an icon set prefix, because the default icon set in the documentation is `mdi`. You can read more about using multiple icon sets [here](/features/icon-fonts/#multiple-icon-sets)
@@ -83,7 +89,7 @@ Material Design is also supported. For more information on how to install it ple
 
 #### MDI SVG
 
-You can manually import only the icons you use when using the @mdi/js package. Read more about using them [here](/features/icon-fonts#material-design-icons-js-svg).
+You can manually import only the icons you use when using the [@mdi/js](https://www.npmjs.com/package/@mdi/js) package. Read more about using them [here](/features/icon-fonts#material-design-icons-js-svg).
 
 ::: info
   Note that this example is using an icon set prefix, because the default icon set in the documentation is `mdi`. You can read more about using multiple icon sets [here](/features/icon-fonts/#multiple-icon-sets)
@@ -100,7 +106,7 @@ Icons can convey all sorts of meaningful information, so it’s important that t
 - **Semantic Icons** are ones that you’re using to convey meaning, rather than just pure decoration. This includes icons without text next to them used as interactive controls — buttons, form elements, toggles, etc.
 
 ::: error
-  WAI-ARIA Authoring Practices 1.1 notes that `aria-hidden="false"` currently behaves inconsistently across browsers.
+  WAI-ARIA Authoring Practices 1.1 notes that `aria-hidden="false"` currently [behaves inconsistently across browsers](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden).
 :::
 
 ::: info

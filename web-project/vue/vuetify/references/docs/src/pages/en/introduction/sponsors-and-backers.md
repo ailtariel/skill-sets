@@ -12,7 +12,7 @@ related:
 
 # Sponsor Vuetify development
 
-Vuetify is an MIT licensed open-source project that's completely free to use.
+Vuetify is an [MIT licensed](https://github.com/vuetifyjs/vuetify/blob/master/LICENSE.md) open-source project that's completely free to use.
 
 <PageFeatures />
 
@@ -24,14 +24,14 @@ Vuetify is actively maintained by a dedicated team of open-source contributors w
 
 ## One-time donations
 
-One-time donations can be made through PayPal.
+One-time donations can be made through [PayPal](https://paypal.me/vuetify).
 
 ## Recurring Pledges
 
 Recurring pledges come with **exclusive** perks such as priority GitHub issues, application auditing, and having your logo placed on this website.
 
-- Become a backer or sponsor via GitHub.
-- Become a backer or sponsor through Open Collective (a transparent fund for supporting the development and maintenance of Vuetify).
+- [Become a backer or sponsor via GitHub](https://github.com/sponsors/johnleider).
+- [Become a backer or sponsor through Open Collective](https://opencollective.com/vuetify) (a transparent fund for supporting the development and maintenance of Vuetify).
 
 ## Current Project Sponsors
 

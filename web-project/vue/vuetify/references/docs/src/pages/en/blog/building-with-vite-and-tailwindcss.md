@@ -19,7 +19,7 @@ We will go through the following steps:
 * Ensure Vuetify's light/dark themes work with TailwindCSS `light:*` and `dark:*` prefixes
 * Align breakpoints configuration
 
- Jacek Czarniecki •  February 16th, 2026
+🖊️ Jacek Czarniecki • 📅 February 16th, 2026
 
 <PromotedEntry />
 
@@ -65,7 +65,7 @@ bun create vuetify
 
 :::
 
-...choose the "Recommended" preset for Vite and select Vuetify 4.
+...choose the "Base" preset and "None" when asked for the CSS framework. The point is to learn how the pieces work together by performing code changes manually.
 
 Verify the boilerplate by building it with the standard NPM build script (e.g. `pnpm run build`).
 
@@ -142,7 +142,9 @@ In order for Vuetify transitions to work properly, we have to ensure `tailwind.*
 @layer vuetify-components;
 @layer vuetify-overrides;
 @layer vuetify-utilities;
+
 @layer tailwind; /* <-- our new utilities */
+
 @layer vuetify-final;
 ```
 
@@ -157,14 +159,13 @@ import 'vuetify/styles'
 // followed by createVuetify({ ... })
 ```
 
-
+![CSS Layers preview in browser DevTools](https://vuetifyjs.b-cdn.net/docs/images/blog/building-with-vite-and-tailwindcss/vuetify-tailwindcss-layers.png)
 
 ### Disable Vuetify utilities
 
 Let's adjust `src/styles/settings.scss`:
 
 ```scss { resource="src/styles/settings.scss" }
-@use './layers';
 @use 'vuetify/settings' with (
   $color-pack: false,
   $utilities: false,
@@ -278,7 +279,7 @@ The new file has to be linked from `tailwind.css`. We also override the radius v
 @source inline('rounded-shaped');
 ```
 
-If you'd rather use the original TailwindCSS `rounded-*` utilities, it is recommended to disallow use of Vuetify's rounded classes, which can be enforced by patching `eslint-plugin-vuetify`. The actual process of patching is specific to the package manager of your choice, so we will skip it for now. If you are stuck, feel free to reach out on Discord.
+If you'd rather use the original TailwindCSS `rounded-*` utilities, it is recommended to disallow use of Vuetify's rounded classes, which can be enforced by patching `eslint-plugin-vuetify`. The actual process of patching is specific to the package manager of your choice, so we will skip it for now. If you are stuck, feel free to reach out on [Discord](https://community.vuetifyjs.com).
 
 ---
 
@@ -537,6 +538,6 @@ Compared to the UnoCSS path, most of the setup lands in `tailwind.css` instead o
 * **Typography**: `text-*` classes were skipped for simplicity - you can introduce your own classes with the `@utility` directive if needed
 * **Breakpoints**: we aligned configuration across three definitions (SCSS, Vuetify config, Tailwind `@theme`) to prevent layout bugs
 
-Reference repository with final state: J-Sek/vuetify-vite-and-tailwind. If you find it useful, give it a .
+Reference repository with final state: [J-Sek/vuetify-vite-and-tailwind](https://github.com/J-Sek/vuetify-vite-and-tailwind). If you find it useful, give it a ⭐.
 
 Cheers!

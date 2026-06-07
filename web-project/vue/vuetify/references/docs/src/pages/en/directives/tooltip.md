@@ -44,7 +44,7 @@ Location is set as a directive argument with the same syntax as the component's 
 
 ### Tooltip text
 
-By default the tooltip will use the target element's `textContent`, or you can pass another string as a directive value. Remember directive values are expressions so static strings must be quoted.
+By default the tooltip will use the target element's [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext), or you can pass another string as a directive value. Remember directive values are expressions so static strings must be quoted.
 
 <ExamplesExample file="v-tooltip-directive/text" />
 

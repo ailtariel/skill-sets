@@ -16,7 +16,9 @@ features:
   spec: https://m2.material.io/components/app-bars-top
 ---
 
-
+<script setup>
+  import PropScrollBehavior from '@/examples/v-app-bar/prop-scroll-behavior.vue'
+</script>
 
 # App bars
 
@@ -57,7 +59,7 @@ The recommended placement of elements inside of `v-app-bar` is:
 - Place contextual actions to the right of navigation
 - Place overflow actions to the far right
 
-
+![App Bar Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-app-bar/v-app-bar-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

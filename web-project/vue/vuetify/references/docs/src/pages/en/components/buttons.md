@@ -45,7 +45,7 @@ The recommended placement of elements inside of `v-btn` is:
 * Place text in the center
 * Place visual content around container text
 
-
+![Button Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-btn/v-btn-anatomy.png)
 
 | Element / Area | Description |
 | - | - |
@@ -142,7 +142,7 @@ A common use-case is to use the `v-btn` with the **icon** property within a [v-t
 
 The `v-btn` component provides slots that enable you to customize content created by its props or to add additional content.
 
-
+![Button Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-btn/v-btn-slots.png)
 
 | Slot | Description |
 | - | - |
@@ -416,7 +416,7 @@ The `v-btn` component is an extension of the native `button` element and support
 
 ### ARIA Attributes
 
-By default, the `v-btn` component includes relevant WAI-ARIA attributes to enhance accessibility. The component is automatically assigned the `type="button"` attribute, which indicates its purpose as a button to assistive technologies.
+By default, the `v-btn` component includes relevant [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) attributes to enhance accessibility. The component is automatically assigned the `type="button"` attribute, which indicates its purpose as a button to assistive technologies.
 
 ### Keyboard Navigation
 

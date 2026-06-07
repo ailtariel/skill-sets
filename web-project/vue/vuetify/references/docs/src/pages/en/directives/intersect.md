@@ -12,7 +12,7 @@ related:
 
 # Intersection observer
 
-The `v-intersect` directive utilizes the Intersection Observer API. It provides an easy-to-use interface for detecting when elements are visible within the user's viewport. This is also used for the [v-lazy](/components/lazy) component.
+The `v-intersect` directive utilizes the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). It provides an easy-to-use interface for detecting when elements are visible within the user's viewport. This is also used for the [v-lazy](/components/lazy) component.
 
 <PageFeatures />
 
@@ -38,6 +38,6 @@ Scroll the window and watch the colored dot. Notice as the [v-card](/components/
 
 #### Options
 
-The `v-intersect` directive accepts options. Available options can be found in the Intersection Observer API. Below is an example using the `threshold` option.
+The `v-intersect` directive accepts options. Available options can be found in the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Below is an example using the `threshold` option.
 
 <ExamplesExample file="v-intersect/prop-options" />

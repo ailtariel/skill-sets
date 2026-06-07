@@ -48,7 +48,7 @@ The recommended placement of elements inside of `v-banner` is:
 * Place `v-banner-text` to the right of any visual content
 * Place `v-banner-actions` to the far right of textual content, offset bottom
 
-
+![Banner Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-banner/v-banner-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

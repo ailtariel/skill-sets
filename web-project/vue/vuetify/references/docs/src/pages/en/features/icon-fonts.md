@@ -1,5 +1,4 @@
 ---
-emphasized: true
 meta:
   title: Icon Fonts
   description: Vuetify supports Material Design Icons, Font awesome and other icon sets through prefixes and global options.
@@ -16,7 +15,7 @@ features:
 
 # Icon Fonts
 
-Out of the box, Vuetify supports many popular icon libraries—Material Design Icons, Material Icons, Font Awesome, Phosphor, Lucide, Tabler, Remix Icon, BoxIcons, and Carbon.
+Out of the box, Vuetify supports many popular icon libraries - [Material Design Icons](https://pictogrammers.com/library/mdi/), [Font Awesome](https://fontawesome.com/), [Phosphor](https://phosphoricons.com/), [Lucide](https://lucide.dev/), [Tabler](https://tabler.io/icons), and more.
 
 <PageFeatures />
 
@@ -57,11 +56,11 @@ While it is still possible to supply the icon value through the default slot in 
 
 ## Installing icon fonts
 
-You are required to include the specified icon library (even when using the default icons from Material Design Icons). This can be done by including a CDN link or importing the icon library into your application.
+You are required to include the specified icon library (even when using the default icons from [Material Design Icons](https://pictogrammers.com/library/mdi/)). This can be done by including a CDN link or importing the icon library into your application.
 
 ::: info
 
-In this page "Material Icons" is used to refer to the official google icons and "Material Design Icons" refers to the extended third-party library
+In this page "Material Icons" is used to refer to the [official google icons](https://fonts.google.com/icons) and "Material Design Icons" refers to the [extended third-party library](https://pictogrammers.com/library/mdi/)
 
 :::
 
@@ -133,9 +132,9 @@ export default createVuetify({
 })
 ```
 
-`@mdi/js` or unplugin-icons are two alternatives to get the rest of the icons that you will need in your application.
+`@mdi/js` or [unplugin-icons](https://github.com/antfu/unplugin-icons) are two alternatives to get the rest of the icons that you will need in your application.
 
-If you want to stick with `@mdi/js`, use the SVG paths as designated in @mdi/js and
+If you want to stick with `@mdi/js`, use the SVG paths as designated in [@mdi/js](https://www.npmjs.com/package/@mdi/js) and
 only import the icons that you need.
 
 The following example shows how to use an imported icon within a `.vue` SFC template:
@@ -205,20 +204,28 @@ Use this tool to search for any Material Design Icons and copy them to your clip
 
 #### UnoCSS icon sets
 
-Vuetify provides pre-configured icon sets that work with UnoCSS Preset Icons. All icons are tree-shaken so only the icons you use are included in your final CSS bundle.
+Vuetify integrates with [UnoCSS Preset Icons](https://unocss.dev/presets/icons), which supports [every icon set available on Iconify](https://icon-sets.iconify.design/). All icons are tree-shaken so only the icons you use are included in the production CSS bundle. You can register multiple icon sets simultaneously and freely mix icons from any of them across your components.
+
+```html
+<v-alert icon="i-solar:album-linear" title="Create new album" />
+<v-alert icon="i-devicon:gitlab" title="Login with GitLab" />
+```
+
+The icon sets listed below have a dedicated Vuetify import that includes **alias mappings** for built-in icons used by Vuetify components (e.g. close, dropdown, checkboxes). You must use one of these as your `defaultSet`, but the aliases can be overridden if needed. Additional sets without aliases can be installed alongside it and referenced freely in your own templates.
 
 | Icon library | Iconify package | Vuetify import | Default set name |
 |---|---|---|---|
-| Material Design Icons | `@iconify-json/mdi` | `vuetify/iconsets/mdi-unocss` | `mdi` |
-| Font Awesome 6 | `@iconify-json/fa6-solid`<br>`@iconify-json/fa6-regular` | `vuetify/iconsets/fa6` | `fa6` |
-| Phosphor | `@iconify-json/ph` | `vuetify/iconsets/ph` | `ph` |
-| Lucide | `@iconify-json/lucide` | `vuetify/iconsets/lucide` | `lucide` |
-| Tabler | `@iconify-json/tabler` | `vuetify/iconsets/tabler` | `tabler` |
-| Remix Icon | `@iconify-json/ri` | `vuetify/iconsets/ri` | `ri` |
-| BoxIcons | `@iconify-json/bx` | `vuetify/iconsets/bx` | `bx` |
-| Carbon | `@iconify-json/carbon` | `vuetify/iconsets/carbon` | `carbon` |
+| [Material Design Icons](https://pictogrammers.com/library/mdi/) | `@iconify-json/mdi` | `vuetify/iconsets/mdi-unocss` | `mdi` |
+| [Font Awesome 6](https://fontawesome.com/) | `@iconify-json/fa6-solid`<br>`@iconify-json/fa6-regular` | `vuetify/iconsets/fa6` | `fa6` |
+| [Phosphor](https://phosphoricons.com/) | `@iconify-json/ph` | `vuetify/iconsets/ph` | `ph` |
+| [Lucide](https://lucide.dev/) | `@iconify-json/lucide` | `vuetify/iconsets/lucide` | `lucide` |
+| [Tabler](https://tabler.io/icons) | `@iconify-json/tabler` | `vuetify/iconsets/tabler` | `tabler` |
+| [Remix Icon](https://remixicon.com/) | `@iconify-json/ri` | `vuetify/iconsets/ri` | `ri` |
+| [BoxIcons](https://boxicons.com/) | `@iconify-json/bx` | `vuetify/iconsets/bx` | `bx` |
+| [Carbon](https://carbondesignsystem.com/elements/icons/library/) | `@iconify-json/carbon` | `vuetify/iconsets/carbon` | `carbon` |
+| [Material Symbols](https://fonts.google.com/icons) | `@iconify-json/material-symbols` | `vuetify/iconsets/ms` | `ms` |
 
-Install `unocss` and the Iconify package for your chosen library:
+Install `unocss` and the Iconify package(s) for your chosen librar(ies):
 
 ::: tabs
 
@@ -240,7 +247,7 @@ bun add unocss @iconify-json/ph -D
 
 :::
 
-Then configure UnoCSS in your project (read the UnoCSS integration section for further details).
+Then configure UnoCSS in your project (read the [UnoCSS integration section](https://unocss.dev/integrations/) for further details).
 
 ::: warning
 
@@ -253,7 +260,11 @@ import { presetIcons, defineConfig } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetIcons(),
+    presetIcons({
+      processor(props) {
+        delete props.color
+      },
+    }),
   ],
 })
 ```
@@ -348,7 +359,7 @@ The easiest way to get started with **FontAwesome** is to use a CDN.
 <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 ```
 
-To install locally you can pull in the free version of **FontAwesome** using your preferred package manager:
+To install locally you can pull in the [free](https://fontawesome.com/) version of **FontAwesome** using your preferred package manager:
 
 ::: tabs
 

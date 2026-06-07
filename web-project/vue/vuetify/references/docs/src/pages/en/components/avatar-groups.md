@@ -1,5 +1,4 @@
 ---
-emphasized: true
 meta:
   nav: Avatar groups
   title: Avatar group component
@@ -67,12 +66,6 @@ Use the **items** prop to render avatars from an array. Strings are treated as i
 Use the **size** prop to control avatar dimensions and the **gap** prop to adjust the overlap between avatars.
 
 <ExamplesExample file="v-avatar-group/prop-size" />
-
-#### Limit
-
-Use the **limit** prop to restrict the number of visible avatars. Overflow is indicated with a "+N" avatar.
-
-<ExamplesExample file="v-avatar-group/prop-limit" />
 
 #### Reverse
 

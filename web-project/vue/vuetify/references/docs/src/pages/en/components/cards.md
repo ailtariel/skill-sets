@@ -51,7 +51,7 @@ The recommended placement of elements inside of `v-card` is:
 * Place `v-card-text` and other forms of media below the card header
 * Place `v-card-actions` after card content
 
-
+![Card Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-card/v-card-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

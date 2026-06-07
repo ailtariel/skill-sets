@@ -30,7 +30,7 @@ It is recommended to familiarize yourself with the [Treeshaking](/features/trees
 
 Vuetify works out of the box without any additional compilers needing to be installed but does support advanced use-cases such as modifying the underlying variables of the framework. Vite provides built-in support for sass, less and stylus files without the need to install Vite-specific plugins for them; just the corresponding pre-processor itself.
 
-To begin modifying Vuetify's internal variables, install the sass pre-processor:
+To begin modifying Vuetify's internal variables, install the [sass](https://sass-lang.com/) pre-processor:
 
 ::: tabs
 
@@ -84,7 +84,7 @@ Within your style file, specify the variables you want to override, and that's i
 
 ::: warning
 
-`'vuetify/styles'` should not be used in sass files as it resolves to precompiled css (vitejs/vite#7809). `'vuetify'` and `'vuetify/settings'` are valid and safe to use
+`'vuetify/styles'` should not be used in sass files as it resolves to precompiled css ([vitejs/vite#7809](https://github.com/vitejs/vite/issues/7809)). `'vuetify'` and `'vuetify/settings'` are valid and safe to use
 
 :::
 
@@ -102,7 +102,7 @@ There are many SASS/SCSS variables that can be customized across the entire Vuet
 
 Available SASS variables are located on each component's API page.
 
-
+![image](https://github.com/vuetifyjs/vuetify/assets/9064066/967da002-5a9e-4bce-8285-1fa9b849e36d "VBtn SASS Variables")
 
 ## Usage in templates
 
@@ -135,7 +135,7 @@ Utility classes are a powerful feature of Vuetify, but they can also be unnecess
 );
 ```
 
-Each utility class is generated with a set of options that are defined here. Disable individual classes by setting their corresponding variable to `false`.
+Each utility class is generated with a set of options that are defined [here](https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/styles/settings/_utilities.scss). Disable individual classes by setting their corresponding variable to `false`.
 
 ::: info
 
@@ -257,7 +257,7 @@ Color packs are handy for quickly applying a color to a component but mostly unu
 
 ## Enabling CSS cascade layers
 
-Cascade layers are a modern CSS feature that makes it easier to write custom styles without having to deal with specificity issues and `!important`. This will be included by default in Vuetify 4 but can optionally be used now:
+[Cascade layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) are a modern CSS feature that makes it easier to write custom styles without having to deal with specificity issues and `!important`. This will be included by default in Vuetify 4 but can optionally be used now:
 
 ```scss { resource="src/styles/settings.scss" }
 @forward 'vuetify/settings' with (
@@ -300,7 +300,7 @@ Only put variables, mixins, and functions in the settings file, styles should be
 Vuetify loads precompiled CSS by default, enabling variable customization will switch to the base SASS files instead which must be recompiled with your project.
 This can be a performance hit if you're using more than a few vuetify components, and also forces you to use the same SASS compiler version as us.
 
-Performance can be improved with Vite by using the modern sass compiler. Replace your `sass` dependency with `sass-embedded`, update vite to 5.4 or later, and set `css.preprocessorOptions.sass.api` to `'modern-compiler'` in the vite config.
+Performance can be improved with Vite by using the modern sass compiler. Replace your `sass` dependency with `sass-embedded`, update vite to 5.4 or later, and set [`css.preprocessorOptions.sass.api`](https://vitejs.dev/config/shared-options#css-preprocessoroptions) to `'modern-compiler'` in the vite config.
 
 ### Symlinks
 

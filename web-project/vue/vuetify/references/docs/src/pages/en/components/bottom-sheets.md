@@ -45,7 +45,7 @@ The recommended components to use inside of a `v-bottom-sheet` are:
 * [v-list](/components/lists/)
 * [v-sheet](/components/sheets/)
 
-
+![Bottom Sheet Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-bottom-sheet/v-bottom-sheet-anatomy.png)
 
 | Element / Area | Description                                                              |
 |----------------|--------------------------------------------------------------------------|
@@ -88,7 +88,7 @@ With the **inset** prop, reduce the maximum width of the content area on desktop
 
 The `v-bottom-sheet` component has access to all of the slots available in [v-dialog](/api/v-dialog#slots).
 
-
+![Bottom Sheet Slots](https://cdn.vuetifyjs.com/docs/images/components/v-bottom-sheet/v-bottom-sheet-slots.png)
 
 | Slot         | Description                                         |
 |--------------|-----------------------------------------------------|

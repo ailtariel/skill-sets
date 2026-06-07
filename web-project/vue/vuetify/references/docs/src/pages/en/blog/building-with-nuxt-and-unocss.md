@@ -2,17 +2,17 @@
 layout: blog
 meta:
   title: Build with Nuxt and UnoCSS
-  description: Learn how to effectively integrate Vuetify with UnoCSS taking into consideration breakpoints, theme, typography and CSS layers.
+  description: Learn how to effectively integrate Vuetify v3 with UnoCSS taking into consideration breakpoints, theme, typography and CSS layers.
   keywords: UnoCSS, TailwindCSS, Theme, CSS Layers
 ---
 
-# Creating a highly optimized Vuetify project with Nuxt and UnoCSS
+# Creating a highly optimized Vuetify 3 project with Nuxt and UnoCSS
 
 Although traditionally we tend to think about Vuetify as a great fit for large projects, it can also serve smaller projects that tend to prioritize performance. When scaffolding new projects it comes with tree-shaking out-of-the-box, but there is still some room for improvement as main CSS bundle ships hundreds of kB of CSS we might not need. If the users like your page loading animation and you can afford a bit of overhead, there is nothing wrong with simplified setup that does the job and let's you focus on the business logic or UX. That said, integrating UnoCSS (atomic CSS engine) will help us trim the bundle and enable dynamic utilities. With it's superpowers we not only avoid writing plain CSS (most of the time), but can also make use of TailwindCSS tooling (IDE extensions) or standardize certain utilities.
 
 The article will walk through scaffolding a starter project, installing and wiring UnoCSS, customizing fonts, handling light/dark mode and aligning breakpoints. Finally, "CSS layers" section shows how to order Vuetify, UnoCSS, and app‑specific styles to avoid specificity conflicts.
 
- Jacek Czarniecki •  December 22nd, 2025
+🖊️ Jacek Czarniecki • 📅 December 22nd, 2025
 
 <PromotedEntry />
 
@@ -52,19 +52,19 @@ Lastly, we will enable CSS layers to establish order. This part is meant for adv
 ::: tabs
 
 ```bash [pnpm]
-pnpm create vuetify
+pnpm create vuetify@2.8.0
 ```
 
 ```bash [yarn]
-yarn create vuetify
+yarn create vuetify@2.8.0
 ```
 
 ```bash [npm]
-npm create vuetify
+npm create vuetify@2.8.0
 ```
 
 ```bash [bun]
-bun create vuetify
+bun create vuetify@2.8.0
 ```
 
 :::
@@ -117,7 +117,7 @@ bun run build
 
 :::
 
-
+![Log from Nuxt build showing entry bundle exceeding 500kB (unminified)](https://cdn.vuetifyjs.com/docs/images/blog/building-with-nuxt-and-unocss/nuxt-build-log.png)
 
 Anytime you build the project, bundle files are right there in the `.output/public/_nuxt` directory. The CSS bundle file named `entry{hash}.css` is one that might be particularly interesting.
 
@@ -185,7 +185,7 @@ export default defineNuxtConfig({
 
 With the dedicated preset for Vuetify, we get all the utilities back. Except this time, UnoCSS scans the project files and generates CSS only for the classes we actually use.
 
-Keep in mind that this library was released fairly recently. If you notice any problem or limitation, reach out on Discord or post the issue on GitHub.
+Keep in mind that this library was released fairly recently. If you notice any problem or limitation, reach out on [Discord](https://community.vuetifyjs.com) or post the issue on [GitHub](https://github.com/vuetifyjs/unocss-preset-vuetify).
 
 ### Migrating to utilities from TailwindCSS v4
 
@@ -213,7 +213,7 @@ bun add -D @unocss/preset-wind4
 
 :::
 
-The preset called Wind4 is an official configuration builder providing making it easy to expose all the utilities from TailwindCSS v4 in your project. There are 2 configuration points - an object passed to the main `presetWind4` method and `theme` field next to the `presets`. Unlike using pure TailwindCSS v4 it let's us configure stuff in JavaScript code.
+The preset called [Wind4](https://unocss.dev/presets/wind4) is an official configuration builder providing making it easy to expose all the utilities from TailwindCSS v4 in your project. There are 2 configuration points - an object passed to the main `presetWind4` method and `theme` field next to the `presets`. Unlike using pure TailwindCSS v4 it let's us configure stuff in JavaScript code.
 
 ```ts { resource="nuxt.config.ts" }
 import presetWind4 from '@unocss/preset-wind4'
@@ -349,7 +349,7 @@ or
 
 Did I mention we have the same problem with `border`? ...ugh... same story, let's move on.
 
-Assuming you want to use VRow and VCol and `$utilities` is no longer `false`, you might be surprised to notice that utilities like `elevation-*`, `hidden-*` (and 2 more) got re-enabled. Those do not have their dedicated flags in the `$utilities` configuration map and only get removed when using strictly `$utilities: false`. It will be resolved in the future - keep an eye on (#22405).
+Assuming you want to use VRow and VCol and `$utilities` is no longer `false`, you might be surprised to notice that utilities like `elevation-*`, `hidden-*` (and 2 more) got re-enabled. Those do not have their dedicated flags in the `$utilities` configuration map and only get removed when using strictly `$utilities: false`. It will be resolved in the future - keep an eye on ([#22405](https://github.com/vuetifyjs/vuetify/pull/22405)).
 
 ### Resolve specificity issues (quickly)
 
@@ -725,7 +725,7 @@ Restart the Dev server and open `localhost:3000/breakpoints`.
 
 ## Using CSS layers
 
-CSS `@layer` is a relatively new feature designed to scope blocks of CSS and avoid conflicts over specificity. Layers establish a defined order and quite easy to reason about. Anything that is not wrapped in `@layer my-name { ... }` is applied on top. The only tricky part is how browser handles `!important`. If you never used them, you can read more on MDN or an excellent article from CSS Tricks.
+CSS `@layer` is a relatively new feature designed to scope blocks of CSS and avoid conflicts over specificity. Layers establish a defined order and quite easy to reason about. Anything that is not wrapped in `@layer my-name { ... }` is applied on top. The only tricky part is how browser handles `!important`. If you never used them, you can read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer) or an [excellent article from CSS Tricks](https://css-tricks.com/css-cascade-layers/).
 
 In our example, all we want from CSS layers is to separate utility classes and ensure they get applied on top of base and components CSS without using `!important`. We will start by ensuring we don't have any leftover configuration in `nuxt.config.ts`:
 

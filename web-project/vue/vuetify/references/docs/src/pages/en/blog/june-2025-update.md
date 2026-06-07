@@ -6,7 +6,15 @@ meta:
   keywords: Vuetify June 2025, VHotkey, VCommandPalette, Vuetify 0, component stability, developer experience
 ---
 
+<script setup>
+  import { useTheme } from 'vuetify'
 
+  const theme = useTheme()
+
+  const zerologo = computed(() => {
+    return `https://cdn.vuetifyjs.com/docs/images/logos/v0-logo-${theme.current.value.dark ? 'dark' : 'light'}.png`
+  })
+</script>
 
 # June 2025 Update
 
@@ -14,7 +22,7 @@ This month is packed full of exciting updates and progress across the Vuetify ec
 
 ---
 
- John Leider •  July 7th, 2025
+🖊️ John Leider • 📅 July 7th, 2025
 
 <PromotedEntry />
 
@@ -24,11 +32,11 @@ This month is packed full of exciting updates and progress across the Vuetify ec
 
 June delivered substantial progress on developer experience enhancements, component stability improvements, and platform ecosystem expansion. Our team focused on shipping major new composables, refining core components, and strengthening the development workflow with significant updates to hotkey management, command palette functionality, and comprehensive bug fixes across the framework.
 
-We also hosted an engaging Q&A session with me, where our community shared their questions and valuable insights. We were thrilled to connect directly with our users and gather feedback that will help shape the future direction of the framework. Don't worry if you missed this session, we have exciting webinars planned for the coming months as well!
+We also hosted an engaging Q&A session with [me](https://github.com/johnleider/), where our community shared their questions and valuable insights. We were thrilled to connect directly with our users and gather feedback that will help shape the future direction of the framework. Don't worry if you missed this session, we have exciting webinars planned for the coming months as well!
 
 ::: success
 
-Cool example of the month: VBites by Jacek
+Cool example of the month: [VBites](https://play.vuetifyjs.com/playgrounds/7Ksitg) by [Jacek](https://github.com/J-Sek)
 
 :::
 
@@ -56,22 +64,22 @@ Cool example of the month: VBites by Jacek
 
 June continued our steady release cadence with several updates addressing bugs and introducing enhancements. These releases focused on component stability and developer experience improvements. View the complete list of changes in the [Full Changelog](#june-2025-changelog).
 
-{ height=200 }
+![Hero image for June release notes](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/june-2025-hero-asdfasdf.png "June release notes hero image"){ height=200 }
 
 **Details:**
 
-* v3.8.8
-* v3.8.9
-* v3.8.10
-* v3.8.11
-* v3.9.0-beta.0
-* v3.9.0-beta.1
+* [v3.8.8](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.8.8)
+* [v3.8.9](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.8.9)
+* [v3.8.10](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.8.10)
+* [v3.8.11](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.8.11)
+* [v3.9.0-beta.0](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.9.0-beta.0)
+* [v3.9.0-beta.1](https://vuetifyjs.com/en/getting-started/release-notes/?version=3.9.0-beta.1)
 
 ---
 
 ## Spotlight: Vuetify Studio
 
-**Did you know?** Vuetify Studio is our comprehensive development platform that often goes unnoticed by the broader community. Studio provides a complete ecosystem for Vuetify development, including:
+**Did you know?** [Vuetify Studio](https://studio.vuetifyjs.com/) is our comprehensive development platform that often goes unnoticed by the broader community. Studio provides a complete ecosystem for Vuetify development, including:
 
 * **Interactive Component Playground**: Test and experiment with components in real-time
 * **Code Generation Tools**: Quickly prototype layouts and component configurations
@@ -86,7 +94,7 @@ We're continuously expanding Studio's capabilities to support modern development
 
 **Details:**
 
-* Vuetify Studio
+* [Vuetify Studio](https://studio.vuetifyjs.com/)
 
 ## Framework
 
@@ -94,7 +102,7 @@ There are multiple new components in development with some of that functionality
 
 ### VHotkey Component and useHotkey Composable
 
-This month marked a significant milestone with the completion and pre-release of our VHotkey component and `useHotkey` composable system. After extensive development and iteration, these tools are now available in Labs for testing and feedback as we work toward their stable release.
+This month marked a significant milestone with the completion and pre-release of our [VHotkey component](https://dev.vuetifyjs.com/en/components/hotkeys/) and `useHotkey` composable system. After extensive development and iteration, these tools are now available in Labs for testing and feedback as we work toward their stable release.
 
 **VHotkey Component Features:**
 
@@ -104,7 +112,7 @@ This month marked a significant milestone with the completion and pre-release of
 * **Platform Awareness**: New `platform` prop allows forcing the component to display Mac vs PC hotkey conventions
 * **Enhanced Customization**: Added `prefix` and `postfix` props for better integration flexibility
 
-{ height=220 }
+![Hero image for VHotkey component](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/hotkeys.png "VHotkey component hero image"){ height=220 }
 
 **useHotkey Composable Features:**
 
@@ -116,8 +124,8 @@ This functionality serves as a critical building block for the upcoming VCommand
 
 **Details:**
 
-* VHotkey Component Documentation
-* useHotkey Composable Documentation
+* [VHotkey Component Documentation](https://dev.vuetifyjs.com/en/components/hotkeys/)
+* [useHotkey Composable Documentation](https://dev.vuetifyjs.com/en/features/hotkey/)
 
 ### New Component Development
 
@@ -125,11 +133,11 @@ We have several new components in development that we are confident will enhance
 
 **VMaskInput**: After vanishing in v2, masking is back in the library with enhanced input capabilities and new features.
 
-{ height=280 }
+![Hero gif for VMaskInput component](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/vmaskinput.gif "VMaskInput component hero gif"){ height=280 }
 
 **VEditor**: Early development phase for a new editor component, expanding Vuetify's content creation capabilities.
 
-{ height=220 }
+![Hero image for VEditor component](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/veditor.png "VEditor component hero image"){ height=220 }
 
 **VVideo**: Documentation improvements, Sass variable extraction, and volume component refinement.
 
@@ -139,13 +147,13 @@ We have several new components in development that we are confident will enhance
 
 **VCommandPalette**: Ongoing development for a powerful command palette component, designed to enhance user interaction and streamline application workflows.{ height=150 }
 
-{ height=370 }
+![Hero image for VCommandPalette component](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/vcommandpalette.png "VCommandPalette component hero image"){ height=370 }
 
 **Details:**
 
-* VMaskInput P.R.
-* VEditor P.R.
-* VVideo P.R.
+* [VMaskInput P.R.](https://github.com/vuetifyjs/vuetify/pull/21519)
+* [VEditor P.R.](https://dev.vuetifyjs.com/en/components/editor/)
+* [VVideo P.R.](https://github.com/vuetifyjs/vuetify/pull/21460)
 
 ## Ecosystem Updates
 
@@ -153,38 +161,38 @@ Multiple advancements were made across the Vuetify ecosystem to improve develope
 
 ### Vuetify Documentation
 
-Vuetify One subscribers can now copy documentation pages as Markdown. This feature allows you to easily extract and reuse documentation content in your projects, enhancing collaboration and knowledge sharing within teams.
+[Vuetify One subscribers](https://vuetifyjs.com/en/?one=subscribe) can now copy documentation pages as Markdown. This feature allows you to easily extract and reuse documentation content in your projects, enhancing collaboration and knowledge sharing within teams.
 
-{ height=220 }
+![Vuetify documentation copy page as markdown](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/copy-page-as-markdown.png "Vuetify documentation copy page as markdown"){ height=220 }
 
 All users can now save favorite search results in the Vuetify documentation. Just press `ctrl+k` or `cmd+k` to open the search bar, type your query, and click the star icon next to the search result you want to save. This feature allows you to quickly access frequently used documentation pages, improving your workflow and efficiency.
 
-{ height=300 }
+![Vuetify documentation search favorites](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/docs-favorites.png "Vuetify documentation search favorites"){ height=300 }
 
 **Details:**
 
-* Copy as Markdown Commit
-* Save Search Favorites Commit
+* [Copy as Markdown Commit](https://github.com/vuetifyjs/vuetify/commit/dfd8eea1ebd28e6fde702c19b15a33af3620daa4)
+* [Save Search Favorites Commit](https://github.com/vuetifyjs/vuetify/commit/14d5e63f2760db84257f324cfa298a8ce9905903)
 
 ### Vuetify One
 
 Updated default interface to include links to various Vuetify ecosystem sites, making it easier for users to navigate and access resources.
 
-{ height=300 }
+![Vuetify One Platform interface](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/one-quicklinks.png "Vuetify One Platform interface"){ height=300 }
 
 ### Vuetify Bin
 
 Bins now support **locking**. This new functionality prevents unwanted changes to shared code examples, ensuring that your collaborative work remains intact and consistent.
 
-{ height=250 }
+![Vuetify Bin locking functionality](https://vuetifyjs.b-cdn.net/docs/images/blog/june-2025-update/lock-bin.png "Vuetify Bin locking functionality"){ height=250 }
 
-This feature will soon propagate to the Vuetify Playground as well as Vuetify Studio.
+This feature will soon propagate to the [Vuetify Playground](https://play.vuetifyjs.com/) as well as [Vuetify Studio](https://studio.vuetifyjs.com/).
 
 It's also now possible to access Bins saved while having an active Vuetify One subscription.
 
 **Details:**
 
-* Vuetify Bin
+* [Vuetify Bin](https://bin.vuetifyjs.com/)
 
 ## Q&A and Upcoming Webinars
 
@@ -192,7 +200,7 @@ June featured successful community Q&A sessions that provided direct interaction
 
 **Missed the Q&A Sessions?** Don't worry! We're planning a comprehensive webinar series launching in July. If you have valuable feedback, suggestions, or questions you'd like to see addressed, keep an eye out for our upcoming webinar announcements. These sessions will provide deep dives into Vuetify best practices, new feature demonstrations, and direct access to core team expertise.
 
-We encourage community members to share their input and help us make these educational sessions as valuable as possible for everyone.
+We encourage community members to [share their input](https://community.vuetifyjs.com/) and help us make these educational sessions as valuable as possible for everyone.
 
 ## Sneak Peek: Vuetify 0
 
@@ -275,53 +283,53 @@ Expand this section to see the detailed changelog for June 2025, including bug f
 
 ### :rocket: Features
 
-* **VDatePicker:** Disable months and years if not allowed (#21466)
+* **VDatePicker:** Disable months and years if not allowed ([#21466](https://github.com/vuetifyjs/vuetify/issues/21466))
 
 ### :wrench: Bug Fixes
 
-* **date:** Keep `createDateRange` internal (#21531)
-* **date:** Week number for DST (#21378)
-* **icons:** Add missing aliases in presets (#21521)
-* **VBtn:** Allow text values for letter-spacing Sass variable (#21602)
-* **VBtn:** Correct letter-spacing compensation for RTL (#21574)
-* **VBtnToggle:** Buttons should be accessible despite overflow (#21577)
-* **VCarousel:** Avoid missing progress bar (#21586)
-* **VChip:** Disable close button of disabled chip (#21512)
-* **VDataTable:** Add missing ARIA label on footer text (#21508)
-* **VDataTable:** Columns are not keyboard-accessible (#20939)
-* **VDataTableColumn:** On tab focus also show sortable icon (#21540)
-* **VDatePicker:** Completely hide days not in weekdays array (#21624)
-* **VDatePicker:** Fix autoscroll (#21556)
-* **VDatePicker:** Reactive month and year (#21563)
-* **VFileInput, VFileUpload:** Handle folders drop (#21495)
-* **VList:** Set item value to item if primitive (#21596)
-* **VListGroup:** Use item value in ID with return-object (#20595)
-* **VNumberInput:** Fix endless increment (#21610)
-* **VNumberInput:** Focus after click handler executed (#21217)
-* **VOtpInput:** Autofocus on intersect (#21582)
-* **VOtpInput:** Trim clipboard text and update focus on finish (#21342)
-* **VSelect, VAutocomplete, VCombobox:** Open menu on icon click (#21617)
-* **VSelect:** Camelize props only for custom use (#21544)
-* **VSelect:** Convert all `itemProps` keys to camelCase (#21518)
-* **VSelect:** Reuse compact chip label style (#21517)
-* **VSlider:** Apply color to slider label (#21538)
-* **VSlider:** Correct step rounding for max value (#21434)
-* **VSpeedDial:** Avoid position glitch when reopening menu (#21451)
-* **VTabs:** Deselect tab when route is no longer active (#21569)
-* **VTextField:** Change order of events for checking input focus state (#21136)
-* **VWindow, VTabs:** Don't override cursor in VWindowItem (#21138)
+* **date:** Keep `createDateRange` internal ([#21531](https://github.com/vuetifyjs/vuetify/issues/21531))
+* **date:** Week number for DST ([#21378](https://github.com/vuetifyjs/vuetify/issues/21378))
+* **icons:** Add missing aliases in presets ([#21521](https://github.com/vuetifyjs/vuetify/issues/21521))
+* **VBtn:** Allow text values for letter-spacing Sass variable ([#21602](https://github.com/vuetifyjs/vuetify/issues/21602))
+* **VBtn:** Correct letter-spacing compensation for RTL ([#21574](https://github.com/vuetifyjs/vuetify/issues/21574))
+* **VBtnToggle:** Buttons should be accessible despite overflow ([#21577](https://github.com/vuetifyjs/vuetify/issues/21577))
+* **VCarousel:** Avoid missing progress bar ([#21586](https://github.com/vuetifyjs/vuetify/issues/21586))
+* **VChip:** Disable close button of disabled chip ([#21512](https://github.com/vuetifyjs/vuetify/issues/21512))
+* **VDataTable:** Add missing ARIA label on footer text ([#21508](https://github.com/vuetifyjs/vuetify/issues/21508))
+* **VDataTable:** Columns are not keyboard-accessible ([#20939](https://github.com/vuetifyjs/vuetify/issues/20939))
+* **VDataTableColumn:** On tab focus also show sortable icon ([#21540](https://github.com/vuetifyjs/vuetify/issues/21540))
+* **VDatePicker:** Completely hide days not in weekdays array ([#21624](https://github.com/vuetifyjs/vuetify/issues/21624))
+* **VDatePicker:** Fix autoscroll ([#21556](https://github.com/vuetifyjs/vuetify/issues/21556))
+* **VDatePicker:** Reactive month and year ([#21563](https://github.com/vuetifyjs/vuetify/issues/21563))
+* **VFileInput, VFileUpload:** Handle folders drop ([#21495](https://github.com/vuetifyjs/vuetify/issues/21495))
+* **VList:** Set item value to item if primitive ([#21596](https://github.com/vuetifyjs/vuetify/issues/21596))
+* **VListGroup:** Use item value in ID with return-object ([#20595](https://github.com/vuetifyjs/vuetify/issues/20595))
+* **VNumberInput:** Fix endless increment ([#21610](https://github.com/vuetifyjs/vuetify/issues/21610))
+* **VNumberInput:** Focus after click handler executed ([#21217](https://github.com/vuetifyjs/vuetify/issues/21217))
+* **VOtpInput:** Autofocus on intersect ([#21582](https://github.com/vuetifyjs/vuetify/issues/21582))
+* **VOtpInput:** Trim clipboard text and update focus on finish ([#21342](https://github.com/vuetifyjs/vuetify/issues/21342))
+* **VSelect, VAutocomplete, VCombobox:** Open menu on icon click ([#21617](https://github.com/vuetifyjs/vuetify/issues/21617))
+* **VSelect:** Camelize props only for custom use ([#21544](https://github.com/vuetifyjs/vuetify/issues/21544))
+* **VSelect:** Convert all `itemProps` keys to camelCase ([#21518](https://github.com/vuetifyjs/vuetify/issues/21518))
+* **VSelect:** Reuse compact chip label style ([#21517](https://github.com/vuetifyjs/vuetify/issues/21517))
+* **VSlider:** Apply color to slider label ([#21538](https://github.com/vuetifyjs/vuetify/issues/21538))
+* **VSlider:** Correct step rounding for max value ([#21434](https://github.com/vuetifyjs/vuetify/issues/21434))
+* **VSpeedDial:** Avoid position glitch when reopening menu ([#21451](https://github.com/vuetifyjs/vuetify/issues/21451))
+* **VTabs:** Deselect tab when route is no longer active ([#21569](https://github.com/vuetifyjs/vuetify/issues/21569))
+* **VTextField:** Change order of events for checking input focus state ([#21136](https://github.com/vuetifyjs/vuetify/issues/21136))
+* **VWindow, VTabs:** Don't override cursor in VWindowItem ([#21138](https://github.com/vuetifyjs/vuetify/issues/21138))
 
 ### :microscope: Code Refactoring
 
-* **VNumberInput:** Replace touch-action with pointercancel (#21436)
+* **VNumberInput:** Replace touch-action with pointercancel ([#21436](https://github.com/vuetifyjs/vuetify/issues/21436))
 
 ### :test_tube: Labs
 
-* **VDateInput:** Use common date range parser (#21450)
-* **VFileUpload:** File name not passed correctly (#21541)
-* **VTimePicker:** Value not changing on wheel (#21549)
-* **VTreeview:** Avoid inaccessible items when overflow (#21443)
-* **VTreeview:** Stop click bubbling up on expand icon (#21083)
+* **VDateInput:** Use common date range parser ([#21450](https://github.com/vuetifyjs/vuetify/issues/21450))
+* **VFileUpload:** File name not passed correctly ([#21541](https://github.com/vuetifyjs/vuetify/issues/21541))
+* **VTimePicker:** Value not changing on wheel ([#21549](https://github.com/vuetifyjs/vuetify/issues/21549))
+* **VTreeview:** Avoid inaccessible items when overflow ([#21443](https://github.com/vuetifyjs/vuetify/issues/21443))
+* **VTreeview:** Stop click bubbling up on expand icon ([#21083](https://github.com/vuetifyjs/vuetify/issues/21083))
 
 </details>
 
@@ -333,8 +341,8 @@ July will focus on finalizing the `VCommandPalette` Labs release, expanding `VMa
 
 The team remains committed to delivering stable, performant components while expanding Vuetify's ecosystem to support modern development patterns. Our focus on developer experience, community feedback integration, and systematic improvement processes continues to drive meaningful progress each month.
 
-We appreciate the community's continued engagement, feedback, and contributions that make these improvements possible. Keep building amazing applications with Vuetify, and don't forget to explore Vuetify Studio for an enhanced development experience.
+We appreciate the community's continued engagement, feedback, and contributions that make these improvements possible. Keep building amazing applications with Vuetify, and don't forget to explore [Vuetify Studio](https://studio.vuetifyjs.com/) for an enhanced development experience.
 
 ---
 
-*Stay connected with Vuetify updates through our GitHub repository, Discord community, and upcoming webinar series announcements.*
+*Stay connected with Vuetify updates through our [GitHub repository](https://github.com/vuetifyjs/vuetify), [Discord community](https://discord.gg/eXubxyJ), and upcoming webinar series announcements.*

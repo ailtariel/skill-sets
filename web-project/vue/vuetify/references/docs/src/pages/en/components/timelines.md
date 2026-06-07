@@ -20,7 +20,13 @@ The `v-timeline` is useful for stylistically displaying chronological informatio
 
 <PageFeatures />
 
+<!--
+## Usage
 
+`v-timeline`s in their simplest form display a vertical timeline that should contain at least one `v-timeline-item`.
+
+<ExamplesExample file="v-timeline/usage" />
+-->
 
 <PromotedEntry />
 
@@ -33,7 +39,11 @@ The `v-timeline` is useful for stylistically displaying chronological informatio
 
 <ApiInline hide-links />
 
+<!-- ## Sub-components
 
+### v-timeline-item
+
+v-timeline-item description -->
 
 ## Examples
 
@@ -69,7 +79,11 @@ Use icons within the `v-timeline-item` dot to provide additional context.
 
 <ExamplesExample file="v-timeline/prop-icon-dots" />
 
+<!-- #### Mirror
 
+You can mirror the placement of the timeline items by using the **mirror** prop.
+
+<ExamplesExample file="v-timeline/prop-mirror" /> -->
 
 #### Size
 
@@ -103,7 +117,13 @@ The **opposite** slot provides an additional layer of customization within your 
 
 <ExamplesExample file="v-timeline/slot-opposite" />
 
+<!--
+#### Timeline item default
 
+If you place a `v-card` inside of a `v-timeline-item`, a caret will appear on the side of the card.
+
+<ExamplesExample file="v-timeline/slot-timeline-item-default" />
+-->
 
 ### Misc
 

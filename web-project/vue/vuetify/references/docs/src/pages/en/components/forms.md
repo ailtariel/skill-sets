@@ -26,7 +26,7 @@ The `v-form` component makes it easy to add validation to form inputs. All input
 
 ::: tip
 
-If you prefer using a 3rd party validation plugin, we provide [examples](#vee-validate) further down the page for integrating both Vee-validate and vuelidate validation libraries.
+If you prefer using a 3rd party validation plugin, we provide [examples](#vee-validate) further down the page for integrating both [Vee-validate](https://github.com/baianat/Vee-validate) and [vuelidate](https://github.com/vuelidate/vuelidate) validation libraries.
 
 :::
 
@@ -74,10 +74,10 @@ By default, all inputs run their validation rules when mounted but do not displa
 
 | `validate-on=` | `"input"` | `"blur"` | `"submit"` | `"invalid-input"` |   `"eager"`   | `"lazy"` |
 |----------------|:---------:|:--------:|:----------:|:-----------------:|:-------------:|:--------:|
-| On mount       |          |         |           |                  | <sup>†</sup> |         |
-| On input       |          |         |           |         ‡         |       *       |    *     |
-| On blur        |          |         |           |                  |       *       |    *     |
-| On submit      |          |         |           |                  |              |         |
+| On mount       |     ✅     |    ✅     |     ✅      |         ✅         | ✅<sup>†</sup> |    ❌     |
+| On input       |     ✅     |    ❌     |     ❌      |         ‡         |       *       |    *     |
+| On blur        |     ✅     |    ✅     |     ❌      |         ✅         |       *       |    *     |
+| On submit      |     ✅     |    ✅     |     ✅      |         ✅         |       ✅       |    ✅     |
 
 <p class="text-body-small">
 * Uses the behavior of whatever it's combined with, the same as on="input" by default.
@@ -123,12 +123,12 @@ The difference between `reset()` and `resetValidation()` is that the former rese
 
 #### Vee-validate
 
-**vee-validate** documentation can be found here.
+**vee-validate** documentation can be found [here](https://vee-validate.logaretm.com/v4/).
 
 <ExamplesExample file="v-form/misc-vee-validate" />
 
 #### Vuelidate
 
-**vuelidate** documentation can be found here.
+**vuelidate** documentation can be found [here](https://vuelidate-next.netlify.app/).
 
 <ExamplesExample file="v-form/misc-vuelidate" />

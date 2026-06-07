@@ -1,5 +1,4 @@
 ---
-emphasized: true
 meta:
   title: CSS Layers
   description: Vuetify 4 uses cascade layers to avoid specificity problems
@@ -14,7 +13,7 @@ This feature was introduced in [v3.6.0 (Nebula)](/getting-started/release-notes/
 
 # CSS Layers
 
-Cascade layers are a modern CSS feature that makes it easier to write custom styles without having to deal with specificity issues and `!important`.
+[Cascade layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) are a modern CSS feature that makes it easier to write custom styles without having to deal with specificity issues and `!important`.
 
 Import order of stylesheets becomes much more important with layers, therefore `import 'vuetify/styles'` or a file containing `@use 'vuetify'` **must** be loaded *before* any components or the CSS reset will take precedence over component styles and break everything. If you have separate plugin files make sure to import the vuetify plugin before `App.vue` or any other components.
 

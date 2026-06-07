@@ -39,7 +39,7 @@ Within your application, import the **useDate** function and use it to access th
 
 ::: info
 
-For a list of all supported date adapters, visit the date-io project repository.
+For a list of all supported date adapters, visit the [date-io](https://github.com/dmtrKovalenko/date-io#projects) project repository.
 
 :::
 
@@ -134,7 +134,7 @@ date.format(adapter.date(), { weekday: 'narrow' })
 
 ## Adapter
 
-The built-in date adapter implements a subset of functionality from the DateIOFormats interface. Because of this, it's easy to swap in any date library supported by date-io.
+The built-in date adapter implements a subset of functionality from the [DateIOFormats](https://github.com/dmtrKovalenko/date-io/blob/master/packages/core/IUtils.d.ts) interface. Because of this, it's easy to swap in any date library supported by [date-io](https://github.com/dmtrKovalenko/date-io).
 
 ### Using DateFns
 
@@ -173,7 +173,7 @@ export default createVuetify({
 })
 ```
 
-For more information on DateFns, visit the date-fns documentation.
+For more information on DateFns, visit the [date-fns](https://date-fns.org/) documentation.
 
 ### Using DayJs
 
@@ -214,7 +214,7 @@ export default createVuetify({
 })
 ```
 
-For more information on DayJs, visit the dayjs documentation.
+For more information on DayJs, visit the [dayjs](https://day.js.org/) documentation.
 
 ### Using Luxon
 
@@ -253,7 +253,7 @@ export default createVuetify({
 })
 ```
 
-For more information on Luxon, visit the luxon documentation.
+For more information on Luxon, visit the [luxon](https://moment.github.io/luxon/) documentation.
 
 ### Using Moment
 
@@ -292,11 +292,11 @@ export default createVuetify({
 })
 ```
 
-For more information on Moment, visit the moment documentation.
+For more information on Moment, visit the [moment](https://momentjs.com/) documentation.
 
 ## Typescript
 
-For TypeScript users, an interface is also exposed for module augmentation:
+For TypeScript users, an interface is also exposed for [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation):
 
 ```ts { resource="src/plugins/vuetify.js" }
 export default createVuetify({

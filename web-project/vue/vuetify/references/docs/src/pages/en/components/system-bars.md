@@ -44,7 +44,7 @@ The recommended placement of elements inside of `v-system-bar` is:
 * Place informational icons to the right
 * Place time or other textual information to the far right
 
-
+![System Bar Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-system-bar/v-system-bar-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

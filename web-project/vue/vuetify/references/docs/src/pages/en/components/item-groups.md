@@ -24,7 +24,7 @@ The `v-item-group` provides the ability to create a group of selectable items ou
 
 The core usage of the `v-item-group` is to create groups of anything that should be controlled by a **model**.
 
-
+<!-- <ExamplesExample file="v-item-group/usage" /> -->
 
 <PromotedEntry />
 

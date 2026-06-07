@@ -1,4 +1,5 @@
 ---
+emphasized: true
 meta:
   title: Date pickers
   description: The date picker component is a stand-alone interface that allows the selection of a date, month and year.
@@ -40,7 +41,7 @@ Date pickers come in two orientation variations, portrait **(default)** and land
 
 The `v-date-picker` component is a stand-alone interface that allows the selection of a date, month and year. This component is built using the [Date composable](/features/dates/).
 
-All date components support the date-io abstraction layer for date management. By default they will use a built-in adapter that uses the native Date object, but it is possible to use any of the date-io adapters. See the [dates](/features/dates/) page for more information.
+All date components support the [date-io](https://github.com/dmtrKovalenko/date-io) abstraction layer for date management. By default they will use a built-in adapter that uses the native Date object, but it is possible to use any of the date-io adapters. See the [dates](/features/dates/) page for more information.
 
 ```js
 import DayJsAdapter from '@date-io/dayjs'
@@ -58,7 +59,7 @@ The `v-date-picker` component supports multiple props for configuring dates that
 
 #### Elevation
 
-The `v-date-picker` component supports elevation up to a maximum value of 5. For more information on elevations, visit the official Material Design elevations page.
+The `v-date-picker` component supports elevation up to a maximum value of 5. For more information on elevations, visit the official [Material Design elevations](https://m3.material.io/styles/elevation) page.
 
 <ExamplesExample file="v-date-picker/prop-elevation" />
 

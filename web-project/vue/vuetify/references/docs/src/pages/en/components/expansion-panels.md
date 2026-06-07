@@ -1,4 +1,5 @@
 ---
+emphasized: true
 meta:
   nav: Expansion panels
   title: Expansion panel component
@@ -50,13 +51,23 @@ There are four different variants of the expansion-panel. Accordion expansion-pa
 
 <ExamplesExample file="v-expansion-panels/prop-variant" />
 
+#### Gap
+
+Use **gap** to add spacing between accordion panels. Can be combined with `:rounded="[outerRadius, innerRadius]"` to adjust the panels corner rounding.
+
+<ExamplesExample file="v-expansion-panels/prop-rounded-gap" />
+
 #### Disabled
 
 Both the expansion-panel and its content can be disabled using the **disabled** prop.
 
 <ExamplesExample file="v-expansion-panels/prop-disabled" />
 
+<!-- #### Focusable
 
+The expansion-panel headers can be made focusable with the prop **focusable**.
+
+<ExamplesExample file="v-expansion-panels/prop-focusable" /> -->
 
 #### Model
 

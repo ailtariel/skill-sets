@@ -2,19 +2,19 @@
 name: vuetify-skilld
 description: "Vuetify reference for Vue projects. Use when code imports \"vuetify\" or uses Vuetify components, layouts, or theming. Confirm the installed major version before applying version-specific migration or breaking-change guidance."
 metadata:
-  version: 4.0.1
-  generated_at: 2026-04-20
-  references_synced_at: 2026-04-20
+  version: 4.1.0
+  generated_at: 2026-06-07
+  references_synced_at: 2026-06-07
 ---
 
-# vuetifyjs/vuetify `vuetify@4.0.1`
-**Tags:** v1-stable: 1.5.24, v2-stable: 2.7.2, dev: 4.0.1
+# vuetifyjs/vuetify `vuetify@4.1.0`
+**Tags:** latest: 4.1.0, v3-stable: 3.12.8, v2-stable: 2.7.2, v1-stable: 1.5.24, dev: 4.1.0-beta.1
 
-**References:** [Docs](./references/docs/_INDEX.md)
+**References:** [Docs](./references/docs/_INDEX.md) · [Release API Index v4.0.1-v4.1.0](./references/releases/v4.0.1-to-v4.1.0-api-index.md) · [AI Implementation Principles](./references/ai-implementation-principles-cn.md)
 
 ## Version Boundary
 
-This skill is generated from Vuetify 4.0.1 references. Before applying API changes, migration notes, or breaking-change guidance, inspect the target project's `package.json` or lockfile and confirm the installed Vuetify major version.
+This skill is updated against Vuetify 4.1.0 references. Before applying API changes, migration notes, or breaking-change guidance, inspect the target project's `package.json` or lockfile and confirm the installed Vuetify major version.
 
 - For Vuetify 4 projects or explicit Vuetify 4 migration tasks, use the v4 guidance below.
 - For Vuetify 3 projects, use only general component/layout/theming guidance that is confirmed to exist in Vuetify 3, and prefer project-local code plus installed package docs over v4 migration notes.
@@ -23,6 +23,8 @@ This skill is generated from Vuetify 4.0.1 references. Before applying API chang
 ## API Changes
 
 This section documents version-specific API changes — prioritize recent major/minor releases.
+
+- For component/API changes introduced between v4.0.1 and v4.1.0, prefer the focused release-derived index before scanning full release notes: [Release API Index v4.0.1-v4.1.0](./references/releases/v4.0.1-to-v4.1.0-api-index.md)
 
 - BREAKING: `VRow` / `VCol` Grid — complete overhaul using CSS `gap` instead of negative margins. `dense` prop removed (use `density="compact"`), `align`/`justify` on `VRow` and `order`/`align-self` on `VCol` removed in favor of utility classes [source](./references/docs/src/pages/en/getting-started/upgrade-guide.md)
 
@@ -44,7 +46,19 @@ This section documents version-specific API changes — prioritize recent major/
 
 - NEW: `VCommandPalette` (experimental) — new labs component providing a search and action interface for application commands [source](./references/releases/v4.0.0-beta.0.md)
 
-**Also changed:** `VCalendar` promoted from labs · `VHotkey` promoted from labs · `VToolbar` `location` prop new · `VAvatar` `badge` prop new · `VProgressCircular` `reveal` prop new · `VTreeview` `indent-lines` props new · `vuetify/styles/core` new entry point · `system` default theme · `VSnackbar` `multi-line` removed · `VContainer` `fill-height` behavior changed
+- NEW: v4.1.0 promoted several labs/components into the core framework: validation rules, `VIconBtn`, `VStepperVertical`, `VPullToRefresh`, `VFileUpload`, `VDateInput`, `VColorInput`, and `VPicker` [source](./references/releases/v4.1.0.md)
+
+- NEW: v4.1.0 adds table and data-table improvements: `VDataTable` sortable header `aria-sort`, selection aria labels, object `loading` with `side`, `expanded` slot transition support, filtered `itemsLength`, mobile header slot, group-by `v-model:opened`, and search match highlighting [source](./references/releases/v4.1.0.md)
+
+- NEW: v4.1.0 adds `hover-elevation` prop and CSS utilities, arbitrary `rounded` values, optional theme page transitions, and a viewport location strategy for `VCommandPalette` / `VOverlay` [source](./references/releases/v4.1.0.md)
+
+- NEW: v4.1.0 component additions include `VSwitch` `size` and square `inset`, `VTable` `caption` slot / `gridlines`, `VNumberInput` `grouping`, `VTooltip` `color` and `target="cursor"` support, `VProgressLinear` `split`, `VSparkline` markers/tooltips, and calendar/date-picker interaction improvements [source](./references/releases/v4.1.0.md)
+
+- NEW LABS: v4.1.0 adds `VDateRangePicker`, `VHeatmap`, `VHighlight`, and `VMonthPicker` as labs components [source](./references/releases/v4.1.0.md)
+
+- FIXED: v4.0.8/v4.0.9 include important focus-trap, overlay, select/menu, SSR `VProgressLinear`, transparent theme color, and `VForm` performance fixes [source](./references/releases/v4.0.8.md) [source](./references/releases/v4.0.9.md)
+
+**Also changed:** `VCalendar` promoted from labs · `VHotkey` promoted from labs · `VToolbar` `location` prop new · `VAvatar` `badge` prop new · `VProgressCircular` `reveal` prop new · `VTreeview` `indent-lines` props new · `vuetify/styles/core` new entry point · `system` default theme · `VSnackbar` `multi-line` removed · `VContainer` `fill-height` behavior changed · Material Symbols iconset via UnoCSS · CSS variables for fonts · `VDataTable` pagination methods in bottom slot · `VCommandPalette` `closeOnSelect` and `before-select` · `VAvatarGroup` `limit` overflow behavior changed
 
 ## Best Practices
 
@@ -123,3 +137,7 @@ createVuetify({
   }
 }
 ```
+
+- Treat components promoted in v4.1.0 as core Vuetify capabilities before introducing local wrappers or third-party equivalents: `VIconBtn`, `VStepperVertical`, `VPullToRefresh`, `VFileUpload`, `VDateInput`, `VColorInput`, and `VPicker` [source](./references/releases/v4.1.0.md)
+
+- Prefer the new v4.1.0 table accessibility and structure props/slots over custom table markup when working with Vuetify tables: `aria-sort`, selection aria labels, `caption` slot, aria passthrough to `<table>`, `gridlines`, `expanded` slot transitions, and mobile header slot [source](./references/releases/v4.1.0.md)

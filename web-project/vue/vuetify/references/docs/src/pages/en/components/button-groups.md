@@ -75,7 +75,11 @@ You can control the border radius with the **rounded** prop.
 
 ### Misc
 
+<!-- #### Toolbar
 
+Easily integrate customized button solutions with a `v-toolbar`
+
+<ExamplesExample file="v-btn-toggle/misc-toolbar" /> -->
 
 #### WYSIWYG
 

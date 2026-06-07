@@ -82,6 +82,6 @@ When inside of a `v-menu`, `v-list-item` will be automatically configured to hav
 
 While Vuetify attempts to make a11y as easy as possible in your application, there are times where additional information is needed. Below you can find a list of helpful resources.
 
-- W3C Web Accessibility Initiative
-- WAI-ARIA Authoring Practices
-- The A11Y Project"
+- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
+- [The A11Y Project](https://a11yproject.com/)"

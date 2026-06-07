@@ -15,6 +15,16 @@ This page describes changes introduced in **v4.0.0** and maps the legacy typogra
 
 ## Quick Reference
 
+| MD2 (Legacy)           | MD3 (New)                                             |
+|------------------------|-------------------------------------------------------|
+| `h1` - `h3`            | `display-large`, `display-medium`, `display-small`    |
+| `h4` - `h6`            | `headline-large`, `headline-medium`, `headline-small` |
+| `subtitle-1`, `body-1` | `body-large`                                          |
+| `body-2`               | `body-medium`                                         |
+| `caption`              | `body-small`                                          |
+| `button`, `subtitle-2` | `label-large`                                         |
+| `overline`             | `label-small`                                         |
+
 <DocTypographyPreview />
 
 ## Conservative Migration Mapping
@@ -23,7 +33,7 @@ If you want to keep text sizes as close as possible to the previous MD2 sizes, u
 
 | Legacy MD2 Class  | MD2 Size | Recommended MD3 Class | MD3 Size | Notes                                     |
 |-------------------|----------|-----------------------|----------|-------------------------------------------|
-| `text-h1`         | 96px     | n/a                   | n/a      |  needs custom variant                   |
+| `text-h1`         | 96px     | n/a                   | n/a      | ⚠️ needs custom variant                   |
 | `text-h2`         | 60px     | `text-display-large`  | 57px     | Close match                               |
 | `text-h3`         | 48px     | `text-display-medium` | 45px     | Close match                               |
 | `text-h4`         | 34px     | `text-headline-large` | 32px     | Close match                               |
@@ -35,7 +45,7 @@ If you want to keep text sizes as close as possible to the previous MD2 sizes, u
 | `text-body-2`     | 14px     | `text-body-medium`    | 14px     | ✓ Exact match                             |
 | `text-button`     | 14px     | `text-label-large`    | 14px     | ✓ Exact match (no uppercase)              |
 | `text-caption`    | 12px     | `text-body-small`     | 12px     | ✓ Exact match                             |
-| `text-overline`   | 12px     | `text-label-medium`   | 12px     |  No uppercase, different letter spacing |
+| `text-overline`   | 12px     | `text-label-medium`   | 12px     | ⚠️ No uppercase, different letter spacing |
 
 ::: warning Important Notes
 

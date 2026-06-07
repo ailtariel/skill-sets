@@ -1,5 +1,4 @@
 ---
-emphasized: true
 meta:
   title: CSS Reset
   description: Vuetify applies a minimal CSS reset to normalize browser inconsistencies.
@@ -43,4 +42,4 @@ Below is a list of styles applied by the reset:
 - Style `cursor` by aria attributes.
 - Minor consitency improvements for search and number inputs.
 
-For a complete list of all applied styles, see the reset stylesheet.
+For a complete list of all applied styles, see the [reset stylesheet](https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/styles/generic/_reset.scss).

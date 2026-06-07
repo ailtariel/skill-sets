@@ -41,7 +41,7 @@ The `v-skeleton-loader` component provides a user with a visual indicator that c
 
 The `v-skeleton-loader` has a default slot that is rendered when the component is not in a loading state.
 
-
+![Skeleton loader Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-skeleton-loader/v-skeleton-loader-anatomy.png)
 
 | Element / Area | Description |
 | - | - |
@@ -151,7 +151,7 @@ For a list of all available SASS variables, navigate to the [v-skeleton-loader](
 
 ## Accessibility
 
-By default, the `v-skeleton-loader` component is assigned a WAI-ARIA role of **alert**. We augment this role with three aria properties. An **aria-busy** value of **true** denotes that a widget is missing required owned elements. An **aria-live** value of **polite** sets the screen reader's priority of live regions. And finally, **aria-label**, which is used to provide a human readable description of the element.
+By default, the `v-skeleton-loader` component is assigned a [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [**alert**](https://www.w3.org/TR/wai-aria/#alert). We augment this role with three aria properties. An [**aria-busy**](https://www.w3.org/TR/wai-aria-1.0/states_and_properties#aria-busy) value of **true** denotes that a widget is missing required owned elements. An [**aria-live**](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of **polite** sets the screen reader's priority of live regions. And finally, [**aria-label**](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), which is used to provide a human readable description of the element.
 
 ### Configuring the aria-label
 

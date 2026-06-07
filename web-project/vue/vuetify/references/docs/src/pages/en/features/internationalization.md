@@ -21,7 +21,7 @@ Vuetify supports language Internationalization (i18n) of its components.
 
 <PromotedEntry />
 
-When bootstrapping your application you can specify available locales and the default locale with the **defaultLocale** option. The **locale** service also supports easy integration with vue-i18n. Using a locale that has an RTL (right-to-left) language also affects the directionality of the Vuetify components.
+When bootstrapping your application you can specify available locales and the default locale with the **defaultLocale** option. The **locale** service also supports easy integration with [vue-i18n](https://vue-i18n.intlify.dev/). Using a locale that has an RTL (right-to-left) language also affects the directionality of the Vuetify components.
 
 ## Getting started
 
@@ -168,7 +168,7 @@ If you are building custom Vuetify components that need to hook into the locale 
 ```
 
 ::: warning
-  The Vuetify locale service only provides a basic translation function `t`, and should really only be used for internal or custom Vuetify components. It is recommended that you use a proper i18n library such as vue-i18n in your own application. Vuetify does provide support for integrating with other libraries.
+  The Vuetify locale service only provides a basic translation function `t`, and should really only be used for internal or custom Vuetify components. It is recommended that you use a proper i18n library such as [vue-i18n](https://vue-i18n.intlify.dev/) in your own application. Vuetify does provide support for integrating with other libraries.
 :::
 
 ## vue-i18n

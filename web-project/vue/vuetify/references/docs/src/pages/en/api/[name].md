@@ -6,7 +6,9 @@ meta:
   keywords: api, vuetify
 ---
 
-
+<script setup>
+  const name = shallowRef('')
+</script>
 
 <ApiView v-on:update:name="name = $event">
 

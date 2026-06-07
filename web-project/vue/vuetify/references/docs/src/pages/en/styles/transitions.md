@@ -41,7 +41,15 @@ Smooth animations help make a UI feel great. Using Vue's transition system and r
 
 ## Examples
 
+<!--
+### Props
 
+#### Custom Origin
+
+Programmatically control the transition origin with a simple prop.
+
+<ExamplesExample file="transitions/prop-custom-origin" />
+-->
 
 ### Misc
 

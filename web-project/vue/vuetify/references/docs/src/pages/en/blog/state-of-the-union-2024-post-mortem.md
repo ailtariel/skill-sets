@@ -10,7 +10,7 @@ meta:
 
 ---
 
- John Leider •  March 19th, 2025
+🖊️ John Leider • 📅 March 19th, 2025
 
 <PromotedEntry />
 
@@ -38,11 +38,11 @@ This isn't some random lineup—it's a crew of passionate coders stepping up to 
 
 - **Shubham Patlani (Technical Lead)** - Leading the team with nearly a decade of experience, Shubham will be at the helm, managing and organizing core team efforts.
 - **Isaias Briones** - Focused on Documentation and the Calendar component.
-- **Henry Aviles** - Focused on the Vuetify API, Vuetify One, and Vuetify MCP.
+- **Henry Aviles** - Focused on the Vuetify API, [Vuetify One](https://one.vuetifyjs.com/), and Vuetify MCP.
 - **Ishan Subedi** - Focused on all things dates, GitHub issues, and pull requests.
-- **Andrei Elkin** - Focused on Nuxt integration, Vuetify Create, and Vuetify Loader.
-- **JC Puno** - Focused on Nuxt integration and SSR support.
-- **Abdelouahed Oumoussa** - Focused on Vuetify Play, Vuetify Bin, Vuetify Awesome, Issues Generator, and implementing ecosystem features.
+- **Andrei Elkin** - Focused on [Nuxt integration](https://github.com/vuetifyjs/vuetify-loader), [Vuetify Create](https://github.com/vuetifyjs/create), and [Vuetify Loader](https://github.com/vuetifyjs/vuetify-loader).
+- **JC Puno** - Focused on [Nuxt integration](https://github.com/vuetifyjs/vuetify-loader) and SSR support.
+- **Abdelouahed Oumoussa** - Focused on [Vuetify Play](https://play.vuetifyjs.com/), [Vuetify Bin](https://bin.vuetifyjs.com/), [Vuetify Awesome](https://github.com/vuetifyjs/awesome), [Issues Generator](https://issues.vuetifyjs.com/), and implementing ecosystem features.
 
 These Vuetify heavy hitters are joining the existing ranks of core team members, including myself, Kael, and a few others. We're not just adding bodies—we're stacking the team with talent that's ready to dig in and carry this framework forward together.
 
@@ -50,12 +50,12 @@ These Vuetify heavy hitters are joining the existing ranks of core team members,
 
 How do we pay for this dream team? Glad you asked. The Open Collective's got $6,800 coming in monthly, and we're sitting on just over $16,000. With the new hires, that's six months before we're back to bartering with coffee. So, I threw in $5,000 of my own—call it a nudge to see if anyone's paying attention.
 
-{ height=300 }
+![Donation to Vuetify Open Collective](https://vuetifyjs.b-cdn.net/docs/images/blog/state-of-the-union-2024-post-mortem/donation.png "Donation to Vuetify Open Collective"){ height=300 }
 
-If 30 companies matched me, we'd fund Vuetify for years. You're rolling your eyes, I can feel it—but picture this: you hit that Open Collective link, and suddenly we're not just a team, we're a movement. I've seen this community rally before.
+If 30 companies matched me, we'd fund Vuetify for years. You're rolling your eyes, I can feel it—but picture this: you hit that [Open Collective link](https://opencollective.com/vuetify), and suddenly we're not just a team, we're a movement. I've seen this [community rally before](https://github.com/vuetifyjs/vuetify/issues/2240).
 
 ## Closing: The Road Ahead
 
 I can't thank this community enough—for sticking with us, for believing in Vuetify even when I faltered. We've lost some along the way, and I own that, but now it's time to build smarter, together. With this team and your support, we'll hit the precision this next chapter demands. How incredible could that be?
 
-If this stirs you, join us on Discord or pitch in directly. Companies using Vuetify, let's shape its future together. This has always been about us—all of us—and it still is.
+If this stirs you, join us on [Discord](https://community.vuetifyjs.com) or pitch in directly. Companies using Vuetify, let's shape its future together. This has always been about us—all of us—and it still is.

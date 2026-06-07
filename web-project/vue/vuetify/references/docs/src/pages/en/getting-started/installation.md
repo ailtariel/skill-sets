@@ -10,7 +10,9 @@ related:
   - /getting-started/release-notes/
 ---
 
-
+<script setup>
+  import { version } from 'vuetify'
+</script>
 
 # Get started with Vuetify 4
 
@@ -20,14 +22,14 @@ Get started with Vuetify, the world’s most popular Vue.js framework for buildi
 
 ## Installation
 
-Vuetify has support for multiple different installation paths with the most common scaffolding tool being create-vuetify
+Vuetify has support for multiple different installation paths with the most common scaffolding tool being [create-vuetify](https://github.com/vuetifyjs/create-vuetify)
 
 For more information regarding supported package managers, please visit their official websites:
 
-* pnpm
-* yarn
-* npm
-* bun
+* [pnpm](https://pnpm.io/)
+* [yarn](https://yarnpkg.com/)
+* [npm](https://npmjs.org/)
+* [bun](https://bun.sh/package-manager)
 
 ## Using Vite
 
@@ -69,7 +71,7 @@ success Installed "create-vuetify@x.x.x" with binaries:
     none
 ```
 
-After making your selections, create-vuetify will generate the structure for your new application.
+After making your selections, [create-vuetify](https://github.com/vuetifyjs/create-vuetify) will generate the structure for your new application.
 
 Once the scaffold is complete, start the vite development server by running the following commands:
 
@@ -82,7 +84,7 @@ pnpm dev
 
 ## Using Nuxt 3
 
-Nuxt is an open-source framework that has helpful features to quickly get you started with developing a full-stack Vue app, such as file-based routing, SSR and component auto-imports.
+[Nuxt](https://nuxt.com/) is an open-source framework that has helpful features to quickly get you started with developing a full-stack Vue app, such as file-based routing, SSR and component auto-imports.
 
 ### Manual setup
 
@@ -213,13 +215,13 @@ You should now have access to all Vuetify components and tools in the Nuxt app.
 
 ### vuetify-nuxt-module
 
-Alternatively, you can use the vuetify-nuxt-module (works only with Vite). The module is strongly opinionated and has a built-in default configuration out of the box. You can use it without any configuration, and it will work for most use cases.
+Alternatively, you can use the [vuetify-nuxt-module](https://github.com/vuetifyjs/nuxt-module) (works only with Vite). The module is strongly opinionated and has a built-in default configuration out of the box. You can use it without any configuration, and it will work for most use cases.
 
-Check the documentation for more information on how to use it.
+Check the [documentation](https://nuxt.vuetifyjs.com/) for more information on how to use it.
 
 ## Using Laravel
 
-The `createApp()` setup may differ, especially if your Laravel application uses inertiajs. As long as you chain with`.use()`, Vuetify should be properly registered and available.
+The `createApp()` setup may differ, especially if your Laravel application uses [inertiajs](https://inertiajs.com/client-side-setup). As long as you chain with`.use()`, Vuetify should be properly registered and available.
 
 ```js  { data-resource=resources/js/app.ts }
 import { createApp } from 'vue'
@@ -252,7 +254,7 @@ If font is defined at `resources/views/app.blade.php`, Vuetify's font settings w
 
 ## Using CDN
 
-We recommend using the latest version of Vuetify 4 from jsdelivr. All components and styles are included.
+We recommend using the latest version of Vuetify 4 from [jsdelivr](https://www.jsdelivr.com/). All components and styles are included.
 
 `https://cdn.jsdelivr.net/npm/vuetify@{{ version }}/dist/vuetify.min.css` { .text-truncate }
 
@@ -292,7 +294,7 @@ Rememeber to include additional script for Vue.js. See full example below:
 
 ## Using as ES Module with CDN
 
-To import Vuetify (and Vue) using an import map you can use the same CDN but contain it in a ES module without tooling
+To import Vuetify (and Vue) using an [import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap) you can use the same CDN but contain it in a ES module without tooling
 
 ::: info
   Unlike regular CDN links, import map expects `.../vuetify.esm.js` (**\*esm.js** instead of **\*.min.js**)
@@ -419,13 +421,13 @@ const vuetify = createVuetify({
 createApp(App).use(vuetify).mount('#app')
 ```
 
-This will include all components and directives regardless of whether or not you are using them. If you instead only want to include used components, have a look at the Vite or Webpack plugins, depending on your setup. The plugins also makes it possible to customize SCSS variables.
+This will include all components and directives regardless of whether or not you are using them. If you instead only want to include used components, have a look at the [Vite](https://npmjs.com/package/vite-plugin-vuetify) or [Webpack](https://npmjs.com/package/webpack-plugin-vuetify) plugins, depending on your setup. The plugins also makes it possible to customize SCSS variables.
 
 Lastly, do not forget to install [icons](/features/icon-fonts/).
 
 ## Fonts
 
-Vuetify uses Roboto as its default font. To ensure your project renders correctly, you need to add the Roboto font yourself. We recommend using @fontsource/roboto or bundling with unplugin-fonts which is the default used in vuetify-create installations.
+Vuetify uses Roboto as its default font. To ensure your project renders correctly, you need to add the Roboto font yourself. We recommend using @fontsource/roboto or bundling with unplugin-fonts which is the default used in [vuetify-create](https://github.com/vuetifyjs/create) installations.
 
 ### Option A — Install via @fontsource/roboto
 
@@ -567,13 +569,13 @@ See [SASS Variables](/features/sass-variables/) for more information.
 
 ## Nightly Builds
 
-The three development branches (`master`, `dev`, and `next`) are automatically published to NPM at 1200 UTC under the `@vuetify/nightly` namespace. They may be outdated or buggy and are therefore not officially supported and are only supplied for testing purposes. These builds can be installed with a package alias.
+The three development branches (`master`, `dev`, and `next`) are automatically published to NPM at 1200 UTC under the [`@vuetify/nightly`](https://www.npmjs.com/package/@vuetify/nightly?activeTab=versions) namespace. They may be outdated or buggy and are therefore not officially supported and are only supplied for testing purposes. These builds can be installed with a [package alias](https://docs.npmjs.com/cli/v8/commands/npm-install#:~:text=Install%20a%20package%20under%20a%20custom%20alias).
 
 | Branch name | Purpose          | package.json entry                         | Changelog                                                           |
 |-------------|------------------|--------------------------------------------|---------------------------------------------------------------------|
-| `master`    | Bug fixes        | `"vuetify": "npm:@vuetify/nightly@latest"` | Changelog |
-| `dev`       | New features     | `"vuetify": "npm:@vuetify/nightly@dev"`    | Changelog    |
-| `next`      | Breaking changes | `"vuetify": "npm:@vuetify/nightly@next"`   | Changelog   |
+| `master`    | Bug fixes        | `"vuetify": "npm:@vuetify/nightly@latest"` | [Changelog](https://unpkg.com/@vuetify/nightly@latest/CHANGELOG.md) |
+| `dev`       | New features     | `"vuetify": "npm:@vuetify/nightly@dev"`    | [Changelog](https://unpkg.com/@vuetify/nightly@dev/CHANGELOG.md)    |
+| `next`      | Breaking changes | `"vuetify": "npm:@vuetify/nightly@next"`   | [Changelog](https://unpkg.com/@vuetify/nightly@next/CHANGELOG.md)   |
 
 ```diff
  "devDependencies": {
@@ -584,6 +586,6 @@ The three development branches (`master`, `dev`, and `next`) are automatically p
 
 ## Questions
 
-Have a question that belongs here? Tell us in our Discord Community or create a request on our Issue Generator.
+Have a question that belongs here? Tell us in our [Discord Community](https://community.vuetifyjs.com/) or create a request on our [Issue Generator](https://issues.vuetifyjs.com/).
 
 <PromotedPromoted slug="vuetify-discord" />

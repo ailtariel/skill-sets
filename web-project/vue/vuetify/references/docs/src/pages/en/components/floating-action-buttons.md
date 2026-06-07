@@ -37,7 +37,13 @@ Floating action buttons can be attached to material to signify a promoted action
 
 <ApiInline hide-links />
 
+<!-- ## Guide
 
+The `v-fab` component is used to indicate a promoted action in your application. It can be used in a variety of contexts, such as a page with no content, a list of items, or a search results page.
+
+### Props
+
+The `v-fab` component has a multitude of props that allow you to customize its appearance and behavior. -->
 
 ## Examples
 

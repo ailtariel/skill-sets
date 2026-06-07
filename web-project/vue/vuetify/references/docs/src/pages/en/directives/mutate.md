@@ -12,7 +12,7 @@ related:
 
 # Mutation observer
 
-The `v-mutate` directive utilizes the Mutation Observer API. It provides an easy to use interface for detecting when elements are updated.
+The `v-mutate` directive utilizes the [Mutation Observer API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver). It provides an easy to use interface for detecting when elements are updated.
 
 <PageFeatures />
 
@@ -20,14 +20,14 @@ The `v-mutate` directive utilizes the Mutation Observer API. It provides an easy
 
 ## Usage
 
-`v-mutate` is a simple interface for the Mutation Observer API that is implemented with Vue directives. There are two main ways to alter `v-mutate`'s options; with directive modifiers using period notation, or with a custom options object. The following table contains information on the available directive modifiers:
+`v-mutate` is a simple interface for the [Mutation Observer API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) that is implemented with [Vue directives](https://v3.vuejs.org/api/directives.html). There are two main ways to alter `v-mutate`'s options; with directive modifiers using period notation, or with a custom options object. The following table contains information on the available directive modifiers:
 
 | Modifier     | Default      | Description |
 | ------------ | -----------  | ----------- |
-| `.attr`      | `true`       | The attr modifier monitors target node's attribute changes                                                       |
-| `.char`      | `true`       | The char modifier monitors changes to target node's character data (and, its descendants if `.sub` is `true`)       |
-| `.child`     | `true`       | The child modifier monitors for the addition or removal of child nodes (and, its descendants if `.sub` is `true`) |
-| `.sub`       | `true`       | The sub modifier extends all monitoring to the entire subtree of target node                                        |
+| `.attr`      | `true`       | The [attr](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributes) modifier monitors target node's attribute changes                                                       |
+| `.char`      | `true`       | The [char](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/characterData) modifier monitors changes to target node's character data (and, its descendants if `.sub` is `true`)       |
+| `.child`     | `true`       | The [child](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/childList) modifier monitors for the addition or removal of child nodes (and, its descendants if `.sub` is `true`) |
+| `.sub`       | `true`       | The [sub](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/subtree) modifier extends all monitoring to the entire subtree of target node                                        |
 | `.once`      | `undefined`  | The [once](#once) modifier invokes the user provided callback one time and disconnects the observer                                                                                                  |
 | `.immediate` | `undefined`  | The [immediate](#immediate) modifier invokes the user provided callback on _mounted_ and does not effect `.once`                                                                                     |
 
@@ -119,7 +119,7 @@ When the value of content changes, both cards immediately call _onMutate_ and it
 
 ### Immediate
 
-Unlike the Intersection Observer API, the provided callback is **not** immediately invoked when a Mutation Observer is created. Vuetify normalizes this behavior with the **immediate** option. In the following example, the `v-mutate` directive invokes the _onMutate_ method when the element is initially mounted in the DOM **and** with every mutation; based upon the provided options.
+Unlike the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver), the provided callback is **not** immediately invoked when a Mutation Observer is created. Vuetify normalizes this behavior with the **immediate** option. In the following example, the `v-mutate` directive invokes the _onMutate_ method when the element is initially mounted in the DOM **and** with every mutation; based upon the provided options.
 
 ```html { resource="Component.vue" }
 <template>

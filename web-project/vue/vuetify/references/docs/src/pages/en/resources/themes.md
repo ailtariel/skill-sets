@@ -10,7 +10,16 @@ related:
   - /features/theme/
 ---
 
+<script setup>
+  import { onMounted } from 'vue'
+  import { useShopifyStore } from '@/stores/shopify'
 
+  const store = useShopifyStore()
+
+  onMounted(() => {
+    store.fetch()
+  })
+</script>
 
 # Vuetify Themes
 
@@ -25,16 +34,6 @@ Vuetify offers both **free** and **premium** pre-made themes designed to get you
 The following themes are created and maintained by Vuetify. They are available for free through the Vuetify store.
 
 <DocThemeVendor name="Vuetify" />
-
----
-
-<br>
-
-## UI Lib
-
-UI Lib is a collection of free and premium themes built on top of Vuetify.
-
-<DocThemeVendor name="UI Lib" />
 
 ---
 

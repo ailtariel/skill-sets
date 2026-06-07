@@ -6,13 +6,19 @@ meta:
   keywords: vuetify, blog, news, updates, stories, ecosystem, state of the union
 ---
 
+<script setup>
+  import AboutTeamMember from '@/components/about/TeamMember.vue'
+  import { VSparkline } from 'vuetify'
 
+  const teams = useTeamMembersStore()
+  const kael = computed(() => teams.members.find(member => member.github === 'KaelWD'))
+</script>
 
 # State of the Union 2024
 
 ---
 
- John Leider •  September 8th, 2024
+🖊️ John Leider • 📅 September 8th, 2024
 
 <PromotedEntry />
 
@@ -26,7 +32,7 @@ It's been a long road to get where we are today, and looking back, I can’t hel
 
 First, I'd like to reflect on what we've been up to for the past year. Since November 2023, we’ve hit some incredible milestones. This includes the release of `v-data-table`, and over 10 other new and old components. Each of these components was designed with developer feedback in mind, making the framework more flexible and feature-complete. We’ve also made significant progress on our ecosystem tools, with Vuetify One, Vuetify Bin, Vuetify Playground, and Vuetify Snips all seeing major updates.
 
-
+![Image of 4 releases banner](https://vuetifyjs.b-cdn.net/docs/images/blog/state-of-the-union-2024/releases.png "Release banners")
 
 - [**v3.4 (Blackguard)**](/getting-started/release-notes/?version=v3.4.0) in November 2023 brought 8 new components:
   - [`v-bottom-sheet`](/components/bottom-sheets/)
@@ -51,45 +57,45 @@ First, I'd like to reflect on what we've been up to for the past year. Since Nov
 
 In addition, we've made significant progress on our ecosystem tools:
 
-
+![Image of all ecosystem logos](https://vuetifyjs.b-cdn.net/docs/images/blog/state-of-the-union-2024/ecosystem.png "Ecosystem logos")
 
 - [**Vuetify One**](/blog/state-of-the-union-2024/?one=subscribe) (January 2024) unified our tools for authentication and state management across the entire Vuetify ecosystem.
-- **Vuetify Bin** (March 2024) was launched as a simple and easy pastebin alternative.
-- **Vuetify Playground** (March 2024) was updated to support saving remote playgrounds for easy sharing with the Vuetify One subscription.
-- **Vuetify Snips** (April 2024) became our first stand-alone product, showcasing advanced Vuetify examples to help fund ongoing development.
-- **Vuetify Issues** (On Deck) is a rebuild of our existing issues website, with a focus on improving the user experience and making it easier to find solutions to common problems.
+- [**Vuetify Bin**](https://bin.vuetifyjs.com/) (March 2024) was launched as a simple and easy pastebin alternative.
+- [**Vuetify Playground**](https://play.vuetifyjs.com/) (March 2024) was updated to support saving remote playgrounds for easy sharing with the Vuetify One subscription.
+- [**Vuetify Snips**](https://snips.vuetifyjs.com/) (April 2024) became our first stand-alone product, showcasing advanced Vuetify examples to help fund ongoing development.
+- **Vuetify Issues** (On Deck) is a rebuild of our existing [issues website](https://issues.vuetifyjs.com/), with a focus on improving the user experience and making it easier to find solutions to common problems.
 
 I'm _extremely_ proud of the team and all that we've been able to accomplish during this time. One of our toughest challenges has been developer churn, where several components were started by one developer and finished by another. But through these transitions, we've continued pushing forward with the support of our amazing community.
 
 A huge win has been the financial support through Open Collective and GitHub Sponsors, with over **$8,000** per month on both platforms. This funding ensures that Vuetify development will continue at full speed.
 
-Please give a shoutout to our [sponsors and backers](/introduction/sponsors-and-backers/) for their ongoing support. 
+Please give a shoutout to our [sponsors and backers](/introduction/sponsors-and-backers/) for their ongoing support. 🎉
 
 ## Current State – Where We Are Now
 
-Today, Vuetify is in an exciting place. While we are still recovering from a tough financial **drought**, things are looking up. Thanks to generous contributions from companies like Abacus, Route4Me, and Teamwork, the framework is now back at full speed.
+Today, Vuetify is in an exciting place. While we are still recovering from a tough financial **drought**, things are looking up. Thanks to generous contributions from companies like [Abacus](https://www.abacus.ch/), [Route4Me](https://route4me.com/), and [Teamwork](https://teamwork.com), the framework is now back at full speed.
 
-With that being said, those who followed my post earlier back in June will know that I've been seeking employment in lieu of the financial situation. During this time, I connected with a company named Optikka. Their entire platform is built on Vue / Vuetify and they were gracious enough to offer me a Senior Developer position. I've been with them for a little over a month now and it's been an amazing experience. I've been able to bring my knowledge of Vuetify to the team and help them build out their platform.
+With that being said, those who followed my post earlier back in [June](https://x.com/zeroskillz/status/1803081840669937724) will know that I've been seeking employment in lieu of the financial situation. During this time, I connected with a company named Optikka. Their entire platform is built on Vue / Vuetify and they were gracious enough to offer me a Senior Developer position. I've been with them for a little over a month now and it's been an amazing experience. I've been able to bring my knowledge of Vuetify to the team and help them build out their platform.
 
-With that in mind, I have taken a step back to analyze my role in Vuetify and decided to pass creative and engineering control of the framework over to Kael. The recent events forced my focus to shift to higher-level tasks, ensuring we never encounter a funding crisis like we did, while still fostering creativity within the team. I'll remain an active contributor, but my role will be different moving forward.
+With that in mind, I have taken a step back to analyze my role in Vuetify and decided to pass creative and engineering control of the framework over to [Kael](https://github.com/kaelwd). The recent events forced my focus to shift to higher-level tasks, ensuring we never encounter a funding crisis like we did, while still fostering creativity within the team. I'll remain an active contributor, but my role will be different moving forward.
 
 <AboutTeamMember v-if="kael" v-bind="{ member: kael }" class="mb-4" />
 
 Kael is a Senior Developer who has been with Vuetify since the beginning. He has a deep understanding of the framework and has been instrumental in shaping its direction. He is responsible for a lot of the cool technology in Vuetify and he still has a lot more in the tank. I have full confidence in his ability to lead the team and continue pushing Vuetify forward.
 
-### Growth 
+### Growth 🚀
 
 Our user base continues to grow, with Vuetify 3 usage officially surpassing Vuetify 2. The demand for the new features and improved performance has been immense, and it’s been amazing to watch our community evolve. The team remains as dedicated as ever to bringing you the best possible UI framework.
 
+![Graph showing weekly download statistics for Vuetify 0, 1, 2 and 3](https://vuetifyjs.b-cdn.net/docs/images/blog/state-of-the-union-2024/downloads.png "Vuetify download statistics")
 
+### Ongoing Success 📈
 
-### Ongoing Success 
+A key recent success story is [**Vuetify Snips**](https://snips.vuetifyjs.com/). It’s quickly become a popular resource for developers looking for premade snippets, supercharging their workflow and easing adoption of Vuetify 3. It's also a beneficial way to support the framework. All sales from Snips go directly back into Vuetify development.
 
-A key recent success story is **Vuetify Snips**. It’s quickly become a popular resource for developers looking for premade snippets, supercharging their workflow and easing adoption of Vuetify 3. It's also a beneficial way to support the framework. All sales from Snips go directly back into Vuetify development.
+### Roadmap Updates 🛣️
 
-### Roadmap Updates 
-
-We have an updated roadmap for the remainder of the year, and I encourage everyone to check it out on the Vuetify Roadmap. There's a lot in store, and we’re excited to keep pushing the framework forward. 
+We have an updated roadmap for the remainder of the year, and I encourage everyone to check it out on the [Vuetify Roadmap](https://vuetifyjs.com/introduction/roadmap). There's a lot in store, and we’re excited to keep pushing the framework forward. 🎯
 
 ## Looking Ahead – The Future
 
@@ -97,7 +103,7 @@ Looking ahead, we're focused on making Vuetify even easier to customize. One exc
 
 As always, the community will be at the heart of Vuetify’s future. [Contributions](/getting-started/contributing/) and [funding](/introduction/sponsors-and-backers/) will be instrumental as we continue to expand the ecosystem. We’re always looking for code contributions, so if you're interested in learning how to help with the framework, feel free to reach out to me!
 
-And of course, our Discord community is always buzzing with activity. If you're looking to engage with fellow developers, troubleshoot issues, or just hang out, we'd love to see you there! 
+And of course, our [Discord community](https://community.vuetifyjs.com) is always buzzing with activity. If you're looking to engage with fellow developers, troubleshoot issues, or just hang out, we'd love to see you there! 💬
 
 ## Personal Reflections
 
@@ -118,4 +124,4 @@ Vuetify has changed me in more ways than one. It’s helped me grow not just as 
 
 As we look to the future, I want to thank every single one of you who has been part of this experiment, whether as a user, contributor, or supporter. The road ahead is bright, and with your help, we’re going to continue bringing high quality features to enhance your Vuetify development experience.
 
-This is just the first of many blog posts to come. Stay tuned for future updates, tutorials, community highlights, and much more. We’re just getting started. 
+This is just the first of many blog posts to come. Stay tuned for future updates, tutorials, community highlights, and much more. We’re just getting started. 🔥

@@ -39,7 +39,7 @@ A basic example of the treeview component.
 
 ::: info
 
-There is a bug related to how babel-plugin-jsx renders templates that degrades VTreeview performance. We are tracking the issue here.
+There is a [bug](https://github.com/vuejs/babel-plugin-jsx/issues/712) related to how [babel-plugin-jsx](https://github.com/vuejs/babel-plugin-jsx) renders templates that degrades VTreeview performance. We are tracking the issue [here](https://github.com/vuetifyjs/vuetify/issues/19919).
 
 :::
 
@@ -77,7 +77,11 @@ When working with large trees it is recommended to include `items-registration="
 
 <ExamplesExample file="v-treeview/prop-items-registration" />
 
+<!-- #### Hoverable
 
+Treeview nodes can have a hover effect.
+
+<ExamplesExample file="v-treeview/prop-hoverable" /> -->
 
 #### Item props
 
@@ -91,7 +95,11 @@ Treeview nodes can be pre-opened on page load.
 
 <ExamplesExample file="v-treeview/prop-open-all" />
 
+<!-- #### Rounded
 
+You can make treeview nodes rounded.
+
+<ExamplesExample file="v-treeview/prop-rounded" /> -->
 
 #### Fluid
 

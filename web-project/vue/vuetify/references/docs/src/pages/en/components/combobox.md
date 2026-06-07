@@ -43,7 +43,7 @@ With Combobox, you can allow a user to create new values that may not be present
 ## Caveats
 
 ::: error
-  As the Combobox allows user input, it **always** returns the full value provided to it (for example a list of Objects will always return an Object when selected). This is because there's no way to tell if a value is supposed to be user input or an object lookup GitHub Issue
+  As the Combobox allows user input, it **always** returns the full value provided to it (for example a list of Objects will always return an Object when selected). This is because there's no way to tell if a value is supposed to be user input or an object lookup [GitHub Issue](https://github.com/vuetifyjs/vuetify/issues/5479)
 
   This also means that a typed string will not select an item the same way clicking on it would, you may want to set `auto-select-first="exact"` when using object items.
 :::

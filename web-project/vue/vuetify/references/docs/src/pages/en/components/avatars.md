@@ -42,7 +42,7 @@ The recommended placement of elements inside of `v-avatar` is:
 * Place a [v-img](/components/images/) or [v-icon](/components/icons/) component within the default *slot*
 * Place textual content within the default *slot*
 
-
+![Avatar Anatomy](https://cdn.vuetifyjs.com/docs/images/components-temp/v-avatar/v-avatar-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

@@ -40,7 +40,7 @@ The virtual scroller displays just enough records to fill the viewport and uses 
 
 The `v-virtual-scroll` component contains only a default slot with no styling options. It is typically used with large collections of [v-list-item](/components/lists/)s.
 
-
+![Virtual scroll Anatomy](https://cdn.vuetifyjs.com/docs/images/components/v-virtual-scroll/v-virtual-scroll-anatomy.png)
 
 | Element / Area | Description |
 | - | - |

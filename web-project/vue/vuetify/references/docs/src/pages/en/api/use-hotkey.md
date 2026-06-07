@@ -5,7 +5,9 @@ meta:
   keywords: useHotkey, hotkey, keyboard shortcuts, composable, api
 ---
 
-
+<script setup>
+  const name = 'useHotkey'
+</script>
 
 # useHotkey API
 
@@ -49,7 +51,7 @@ function useHotkey(
             <strong>keys</strong>
           </td>
           <td class="text-mono">
-            <code>MaybeRef<string | undefined></code>
+            <code>MaybeRef&lt;string | undefined&gt;</code>
           </td>
           <td class="text-mono">
             <em>required</em>
@@ -63,7 +65,7 @@ function useHotkey(
             <strong>callback</strong>
           </td>
           <td class="text-mono">
-            <code>(e: KeyboardEvent) => void</code>
+            <code>(e: KeyboardEvent) =&gt; void</code>
           </td>
           <td class="text-mono">
             <em>required</em>
@@ -111,7 +113,7 @@ function useHotkey(
             <strong>event</strong>
           </td>
           <td class="text-mono">
-            <code>MaybeRef<'keydown' | 'keyup'></code>
+            <code>MaybeRef&lt;'keydown' | 'keyup'&gt;</code>
           </td>
           <td class="text-mono">
             <code>'keydown'</code>
@@ -125,7 +127,7 @@ function useHotkey(
             <strong>inputs</strong>
           </td>
           <td class="text-mono">
-            <code>MaybeRef<boolean></code>
+            <code>MaybeRef&lt;boolean&gt;</code>
           </td>
           <td class="text-mono">
             <code>false</code>
@@ -139,7 +141,7 @@ function useHotkey(
             <strong>preventDefault</strong>
           </td>
           <td class="text-mono">
-            <code>MaybeRef<boolean></code>
+            <code>MaybeRef&lt;boolean&gt;</code>
           </td>
           <td class="text-mono">
             <code>true</code>
@@ -153,7 +155,7 @@ function useHotkey(
             <strong>sequenceTimeout</strong>
           </td>
           <td class="text-mono">
-            <code>MaybeRef<number></code>
+            <code>MaybeRef&lt;number&gt;</code>
           </td>
           <td class="text-mono">
             <code>1000</code>
@@ -182,7 +184,7 @@ function useHotkey(
       <tbody>
         <tr>
           <td class="text-mono">
-            <code>() => void</code>
+            <code>() =&gt; void</code>
           </td>
           <td class="text-mono pt-4">
             <p>Cleanup function that removes the keyboard event listener. Automatically called when the component unmounts if used within a Vue component setup context.</p>

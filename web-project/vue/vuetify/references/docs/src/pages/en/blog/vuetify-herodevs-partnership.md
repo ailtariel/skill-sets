@@ -10,7 +10,7 @@ meta:
 
 ---
 
- Taylor Corbett •  March 28th, 2025
+🖊️ Taylor Corbett • 📅 March 28th, 2025
 
 <PromotedEntry />
 
@@ -33,12 +33,12 @@ Vuetify 2 has been widely adopted across industries, helping developers build hi
 
 With **HeroDevs' Vue 2 NES + Essentials**, organizations can continue using Vuetify 2 while receiving:
 
--  **Security patches** for known vulnerabilities
--  **Compliance updates** to meet regulatory standards
--  **Compatibility fixes** to maintain stability in modern environments
+- ✅ **Security patches** for known vulnerabilities
+- ✅ **Compliance updates** to meet regulatory standards
+- ✅ **Compatibility fixes** to maintain stability in modern environments
 
 ### Supporting the Vuetify Community
 
 While Vuetify is focused on the future with Vuetify 3 and beyond, we recognize the importance of providing a secure option for teams that still rely on Vuetify 2. Partnering with HeroDevs ensures that these users have a reliable, long-term solution to keep their applications secure.
 
-For more information on **Vue 2 NES + Essentials**, visit HeroDevs.com to learn how to keep your Vuetify 2 application secure and current.
+For more information on **Vue 2 NES + Essentials**, visit [HeroDevs.com](https://www.herodevs.com/blog-posts/vuetify-2-end-of-life-ensuring-continued-support-with-herodevs-never-ending-support?utm_source=partnership&utm_medium=coblog&utm_campaign=Vuetify2&utm_id=vuetify+partnership) to learn how to keep your Vuetify 2 application secure and current.

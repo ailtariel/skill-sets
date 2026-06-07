@@ -24,7 +24,7 @@ The `v-bottom-navigation` component is an alternative to the sidebar. It is prim
 
 ## Usage
 
-While `v-bottom navigation` is meant to be used with vue-router, you can also programmatically control the active state of the buttons by using the **value** property. A button is given a default value of its _index_ with `v-bottom-navigation`.
+While `v-bottom navigation` is meant to be used with [vue-router](https://router.vuejs.org/), you can also programmatically control the active state of the buttons by using the **value** property. A button is given a default value of its _index_ with `v-bottom-navigation`.
 
 <ExamplesUsage name="v-bottom-navigation" />
 
@@ -57,11 +57,17 @@ The **color** prop applies a color to the background of the bottom navigation. W
 
 #### Grow
 
-Using the **grow** property forces [v-btn](/components/buttons/) components to _fill_ all available space. Buttons have a maximum width of **168px** per the Bottom Navigation MD specification.
+Using the **grow** property forces [v-btn](/components/buttons/) components to _fill_ all available space. Buttons have a maximum width of **168px** per the [Bottom Navigation MD specification](https://material.io/components/bottom-navigation#specs).
 
 <ExamplesExample file="v-bottom-navigation/prop-grow" />
 
+<!-- TODO: Fix this example when scrolling techniques is implemented
+#### Hide on scroll
 
+The `v-bottom-navigation` component hides when *scrolling up* when using the **hide-on-scroll** property. This is similar to the [scrolling techniques](https://material.io/archive/guidelines/patterns/scrolling-techniques.html) that are supported in [v-app-bar](/components/app-bars/). In the following example, scroll *up and down* to see this behavior.
+
+<ExamplesExample file="v-bottom-navigation/prop-hide-on-scroll" />
+-->
 
 #### Horizontal
 
@@ -69,7 +75,13 @@ Adjust the style of buttons and icons by using the **horizontal** prop. This pos
 
 <ExamplesExample file="v-bottom-navigation/prop-horizontal" />
 
+<!-- TODO: Fix this example when scrolling techniques is implemented
+#### Scroll threshold
 
+Modify the **scroll-threshold** property to increase the distance a user must scroll before the `v-bottom-navigation` is hidden.
+
+<ExamplesExample file="v-bottom-navigation/prop-scroll-threshold" />
+-->
 
 #### Shift
 

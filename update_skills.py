@@ -82,17 +82,12 @@ SKILLS: tuple[SkillSource, ...] = (
         source_path=Path("skills/penpot-uiux-design"),
         target_path=Path("web-project/design"),
     ),
-    SkillSource(
-        name="vuetify",
-        repo="https://github.com/skilld-dev/vue-ecosystem-skills.git",
-        source_path=Path("skills/vuetify-skilld"),
-        target_path=Path("web-project/vue/vuetify"),
-    ),
 )
 
 
 UNKNOWN_SOURCES: tuple[str, ...] = (
     "web-project: local aggregate entry point; no external git source.",
+    "vuetify: locally maintained against official Vuetify docs; do not overwrite from skilld-dev/vue-ecosystem-skills.",
 )
 
 

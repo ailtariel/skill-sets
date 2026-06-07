@@ -11,7 +11,7 @@ related:
 
 # Colors
 
-Out of the box you get access to all colors in the Material Design specification through **sass** and **javascript**. These values can be used within your style sheets, your component files and on actual components via the **color** prop.
+Out of the box you get access to all colors in the [Material Design specification](https://material.io/design/color/the-color-system.html) through **sass** and **javascript**. These values can be used within your style sheets, your component files and on actual components via the **color** prop.
 
 <PageFeatures />
 
@@ -19,7 +19,7 @@ Out of the box you get access to all colors in the Material Design specification
 
 ## Classes
 
-Each color from the specification gets converted to a **background** and **text** variant for styling within your application through a class, e.g. `<div class="bg-red">` or `<span class="text-red">`. These class colors are defined here.
+Each color from the specification gets converted to a **background** and **text** variant for styling within your application through a class, e.g. `<div class="bg-red">` or `<span class="text-red">`. These class colors are defined [here](https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/styles/settings/_colors.scss).
 
 <ExamplesExample file="color/classes" />
 

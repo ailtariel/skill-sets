@@ -11,7 +11,7 @@ related:
 
 # Frequently asked questions
 
-Stuck on a particular problem? Check some of these common gotchas before creating a ticket. If you still cannot find what you are looking for, you can submit an issue on GitHub or ask in our community.
+Stuck on a particular problem? Check some of these common gotchas before creating a ticket. If you still cannot find what you are looking for, you can submit an [issue](https://issues.vuetifyjs.com/) on GitHub or ask in our [community](https://community.vuetifyjs.com/).
 
 <PageFeatures />
 
@@ -27,10 +27,10 @@ The following responses are a collection of common questions asked by the Vuetif
 
 * **Does Vuetify provide support?** { #does-vuetify-provide-support }
 
-  Vuetify is a free to use Open Source project released under the MIT license. There are multiple ways to receive support for Vuetify:
+  Vuetify is a free to use Open Source project released under the [MIT](https://opensource.org/licenses/MIT) license. There are multiple ways to receive support for Vuetify:
 
-  * Join our Discord Community - (Free/Paid)
-  * Ask a question on GitHub Discussions - (Free)
+  * Join our [Discord Community](https://community.vuetifyjs.com/) - (Free/Paid)
+  * Ask a question on [GitHub Discussions](https://discussions.vuetifyjs.com/) - (Free)
   * Get [Chat Support](/introduction/enterprise-support/) from Vuetify - (Paid)
 
 * **What is the difference between Vuetify and Vue?** { #what-is-the-difference-between-vuetify-and-vue }
@@ -43,7 +43,7 @@ The following responses are a collection of common questions asked by the Vuetif
 
 * **Is Vuetify 2 still supported?** { #is-vuetify-2-still-supported }
 
-  Vuetify 2 reached End of Life (EOL) on [January 25th, 2025](/introduction/long-term-support/). For security and commercial support, see our partner, HeroDevs.
+  Vuetify 2 reached End of Life (EOL) on [January 25th, 2025](/introduction/long-term-support/). For security and commercial support, see our partner, [HeroDevs](https://www.herodevs.com/support/vuetify-nes?utm_source=partnership&utm_medium=partnership&utm_campaign=partnership&utm_id=vuetify2).
 
 * **Can I use Vuetify with other CSS frameworks?** { #can-i-use-vuetify-with-other-css-frameworks }
 
@@ -58,8 +58,8 @@ The following responses are a collection of common questions asked by the Vuetif
   If you need help with an issue, please use one of our help channels:
 
   * [Vuetify Enterprise Support](/introduction/enterprise-support/)
-  * Discord Community
-  * GitHub Discussions
+  * [Discord Community](https://community.vuetifyjs.com/)
+  * [GitHub Discussions](https://discussions.vuetifyjs.com/)
 
 * **Can I contribute to Vuetify?** { #can-i-contribute-to-vuetify }
 
@@ -91,11 +91,11 @@ The following responses are a collection of common questions asked by the Vuetif
 
 * **I found a bug, what should I do?** { #i-found-a-bug-what-should-i-do }
 
-  Please create a new issue with our Issue Generator. Please make sure to check for existing issues before creating a new one.
+  Please create a new [issue](https://issues.vuetifyjs.com/) with our Issue Generator. Please make sure to check for existing issues before creating a new one.
 
 * **Why did Vuetify 3 change `value` to `model-value`?**
 
-  The `value` prop was changed in Vue 3 to support a new `v-model` syntax. See the official Vue docs for more information on Component v-model.
+  The `value` prop was changed in Vue 3 to support a new `v-model` syntax. See the official Vue docs for more information on [Component v-model](https://vuejs.org/guide/components/v-model.html).
 
 * **Is Vuetify 3 compatible with `@vue/compat`?**
 
